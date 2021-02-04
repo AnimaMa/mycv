@@ -8,6 +8,7 @@ export const MyTheme = {
   color: {
     white: "#ffffff",
     primary: "#003a8c",
+    secondary: "#1896e0",
     red: "#E8381B",
     dark: "#17232C",
     blue: "#1E93F5",

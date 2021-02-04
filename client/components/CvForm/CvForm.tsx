@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FormProvider, useForm } from "react-hook-form";
 import { BasicsSection } from "./components/BasicsSection/BasicsSection";
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 export interface CvFormProps {
   className?: string;
@@ -17,9 +20,12 @@ const CvFormInner = (props: CvFormProps) => {
       <FormProvider {...rhfMethods}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <BasicsSection />
-          <button type="submit" className="btn btn-primary">
-            Create
-          </button>
+
+          <Grid container justify="center">
+            <Button variant="contained" color="primary" type="submit" className="btn btn-primary">
+              Create
+            </Button>
+          </Grid>
         </form>
       </FormProvider>
     </div>

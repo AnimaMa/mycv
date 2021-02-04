@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
 
   body {
     font-size: 1.6rem;
-    font-family: ${(props) => props.theme.fonts.primaryFont}, sans-serif;
+    font-family: ${(props) => props.theme.fonts.primaryFont};
     color: ${(props) => props.theme.color.dark};
     width:100%; 
      min-height: 100%
@@ -60,10 +60,14 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
   }
  
  p { 
-   font-size: 13px;
+   font-size: 16px;
    line-height: 17px;
    font-weight: 600;
+   font-family: ${(props) => props.theme.fonts.primaryFont};
+
  }
-
-
+ 
+  .MuiFormControl-root {
+    width: 100%;
+  }
 `;
