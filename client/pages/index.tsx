@@ -10,6 +10,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"></meta>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />
       </Head>
       <Layout>
