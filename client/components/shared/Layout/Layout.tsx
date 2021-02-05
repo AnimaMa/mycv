@@ -1,7 +1,4 @@
-import {
-  createGlobalStyle,
-  ThemeProvider,
-} from "styled-components"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { MyTheme } from "../Theme/Theme"
 import { GlobalStyle } from "../Theme/GlobalStyle"
 import React, { ReactNode } from "react"
@@ -13,10 +10,11 @@ import { Header } from "../Header/Header"
 interface LayoutProps {
   className?: string
   children: ReactNode
+  bgColor?: boolean
 }
 const Layout = (props: LayoutProps) => {
   return (
-    <div className={props.className}>
+    <div className={`${props?.className} ${props.bgColor ? "with-bg-color" : ""}`}>
       <ThemeProvider theme={MyTheme}>
         <GlobalStyle />
         <Header />

@@ -17,19 +17,19 @@ const SkillsSectionInner = (props: SkillsSectionProps) => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="skills.name" placeholder="Názov" />
+            <FormInput name="skill.name" placeholder="Názov" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="skills.level" placeholder="Stupeň" />
+            <FormInput name="skill.level" placeholder="Stupeň" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="skills.technologies" placeholder="Skill (napr. Communication, Teamwork, React, Design)" />
+            <FormInput name="skill.technologies" placeholder="Skill (napr. Communication, Teamwork, React, Design)" />
           </FormControl>
         </Grid>
       </Grid>

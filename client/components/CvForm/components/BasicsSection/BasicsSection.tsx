@@ -1,8 +1,6 @@
-import { Button, Grid } from "@material-ui/core"
+import { Grid } from "@material-ui/core"
 import FormControl from "@material-ui/core/FormControl"
-import FormLabel from "@material-ui/core/FormLabel"
 import React from "react"
-import { useFormContext } from "react-hook-form"
 import styled from "styled-components"
 import { FormInput } from "../../../shared/Form/FormInput/FormInput"
 import { FormSection } from "../../../shared/Form/FormSection/FormSection"
@@ -14,8 +12,6 @@ export interface BasicsSectionProps {
 }
 
 const BasicsSectionInner = (props: BasicsSectionProps) => {
-  const { register, errors, getValues, setValue } = useFormContext()
-
   return (
     <FormSection className={props.className}>
       <FormSectionTitle>Základné informácie </FormSectionTitle>

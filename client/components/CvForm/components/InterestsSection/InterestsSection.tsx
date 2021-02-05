@@ -18,7 +18,7 @@ const InterestsSectionInner = (props: InterestsSectionProps) => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="interests.name" placeholder="Názov" />
+            <FormInput name="interest.name" placeholder="Názov" />
           </FormControl>
         </Grid>
       </Grid>

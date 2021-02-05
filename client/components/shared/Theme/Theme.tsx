@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createMuiTheme } from "@material-ui/core"
 
 export const MyTheme = {
   name: "Default",
@@ -15,6 +15,7 @@ export const MyTheme = {
     gray: "rgba(0, 0, 0, 0.1)",
     black: "#000000",
     darkGray: "rgba(0, 0, 0, 0.5)",
+    bgColor: "#e0dddd2e",
   },
   spacing: {
     sectionMarginTop: "14rem",
@@ -22,6 +23,6 @@ export const MyTheme = {
   gradient: {
     primary: "linear-gradient(90deg, #FF690F -0.56%, #E8381B 100%)",
   },
-};
+}
 
-export const muiTheme = createMuiTheme();
+export const muiTheme = createMuiTheme()

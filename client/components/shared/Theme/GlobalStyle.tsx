@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
   section {
     width: 100%;
     height: 100%;
+    padding: 30px 0;
   }
   
   * {
@@ -69,5 +70,14 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
  
   .MuiFormControl-root {
     width: 100%;
+  }
+
+  .tac {
+    text-align: center;
+  }
+
+  .with-bg-color {
+   background-color: ${(props) => props.theme.color.bgColor};
+
   }
 `

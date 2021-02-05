@@ -15,16 +15,17 @@ const LanguagesSectionInner = (props: LanguagesSectionProps) => {
   return (
     <FormSection className={props.className}>
       <FormSectionTitle>Jazyky</FormSectionTitle>
+
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="languages.name" placeholder="Jazyk" />
+            <FormInput name="language.name" placeholder="Jazyk" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="languages.fluency" placeholder="Stupeň" />
+            <FormInput name="language.fluency" placeholder="Stupeň" />
           </FormControl>
         </Grid>
       </Grid>
