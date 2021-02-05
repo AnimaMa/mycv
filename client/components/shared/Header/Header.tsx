@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
-import Container from "@material-ui/core/Container";
+import React from "react"
+import styled from "styled-components"
+import Link from "next/link"
+import Container from "@material-ui/core/Container"
 
 export interface HeaderProps {
-  className?: string;
+  className?: string
 }
 
 const HeaderInner = (props: HeaderProps) => {
   return (
     <header className={props.className}>
-      <Container className="container">
+      <Container className="custom-container">
         <nav className="navigation">
           <p>logo</p>
           <div>
@@ -33,13 +33,13 @@ const HeaderInner = (props: HeaderProps) => {
         </nav>
       </Container>
     </header>
-  );
-};
+  )
+}
 
 export const Header = styled(HeaderInner)`
   height: 80px;
 
-  .container {
+  .custom-container {
     height: 100%;
   }
   .navigation {
@@ -52,4 +52,4 @@ export const Header = styled(HeaderInner)`
       margin: 0 8px;
     }
   }
-`;
+`

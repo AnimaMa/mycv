@@ -1,7 +1,7 @@
-import Container from "@material-ui/core/Container";
-import Head from "next/head";
-import React from "react";
-import Layout from "../components/shared/Layout/Layout";
+import Container from "@material-ui/core/Container"
+import Head from "next/head"
+import React from "react"
+import Layout from "../components/shared/Layout/Layout"
 
 export default function Home() {
   return (
@@ -18,5 +18,5 @@ export default function Home() {
         </Container>
       </Layout>
     </div>
-  );
+  )
 }

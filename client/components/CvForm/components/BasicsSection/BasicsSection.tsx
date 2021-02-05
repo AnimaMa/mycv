@@ -1,20 +1,20 @@
-import { Grid } from "@material-ui/core";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import React from "react";
-import { useFormContext } from "react-hook-form";
-import styled from "styled-components";
-import { FormInput } from "../../../shared/Form/FormInput/FormInput";
-import { FormSection } from "../../../shared/Form/FormSection/FormSection";
-import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle";
-import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle";
+import { Button, Grid } from "@material-ui/core"
+import FormControl from "@material-ui/core/FormControl"
+import FormLabel from "@material-ui/core/FormLabel"
+import React from "react"
+import { useFormContext } from "react-hook-form"
+import styled from "styled-components"
+import { FormInput } from "../../../shared/Form/FormInput/FormInput"
+import { FormSection } from "../../../shared/Form/FormSection/FormSection"
+import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle"
+import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
 
 export interface BasicsSectionProps {
-  className?: string;
+  className?: string
 }
 
 const BasicsSectionInner = (props: BasicsSectionProps) => {
-  const { register, errors, getValues, setValue } = useFormContext();
+  const { register, errors, getValues, setValue } = useFormContext()
 
   return (
     <FormSection className={props.className}>
@@ -109,7 +109,7 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         </Grid>
       </Grid>
     </FormSection>
-  );
-};
+  )
+}
 
-export const BasicsSection = styled(BasicsSectionInner)``;
+export const BasicsSection = styled(BasicsSectionInner)``

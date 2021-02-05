@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { MyTheme } from "./Theme";
+import { createGlobalStyle } from "styled-components"
+import { MyTheme } from "./Theme"
 export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
    html {
       height:100%;
@@ -70,4 +70,4 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
   .MuiFormControl-root {
     width: 100%;
   }
-`;
+`
