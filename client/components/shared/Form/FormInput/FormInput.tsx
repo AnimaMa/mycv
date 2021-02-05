@@ -5,18 +5,19 @@ import styled from "styled-components"
 
 export interface FormInputProps {
   className?: string
+  defaultValue?: string
 }
 
 const FormInputInner = (props) => {
   const { control, errors } = useFormContext()
-  const { name, label } = props
+  const { name, label, defaultValue } = props
 
   return (
     <Controller
       as={TextField}
       name={name}
       control={control}
-      defaultValue=""
+      defaultValue={defaultValue}
       label={label}
       fullWidth={true}
       error={errors[name]}

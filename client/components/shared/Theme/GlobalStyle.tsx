@@ -2,11 +2,11 @@ import { createGlobalStyle } from "styled-components"
 import { MyTheme } from "./Theme"
 export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
    html {
-      height:100%;
+      /* height:100%;
       font-size: 62.5%;
       @media screen and (max-width: 600px) {
         font-size: 50%;
-      }
+      } */
   }
 
   body {

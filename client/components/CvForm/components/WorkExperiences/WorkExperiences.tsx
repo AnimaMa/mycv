@@ -22,25 +22,29 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="workExperience.company" placeholder="Spoločnosť" />
+            <FormInput name="workExperience.company" placeholder="Spoločnosť" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="workExperience.position" placeholder="Pozícia" />
+            <FormInput name="workExperience.position" placeholder="Pozícia" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="workExperience.usedTechnologies" placeholder="Technológie s ktorými si pracoval" />
+            <FormInput
+              name="workExperience.usedTechnologies"
+              placeholder="Technológie s ktorými si pracoval"
+              defaultValue=""
+            />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="workExperience.website" placeholder="Odkaz na ich webstránku" />
+            <FormInput name="workExperience.website" placeholder="Odkaz na ich webstránku" defaultValue="" />
           </FormControl>
         </Grid>
 
@@ -49,17 +53,17 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
         </Grid>
 
         <Grid item xs={4}>
-          <FormKeyboardDatePicker label="Začiatok" name="workExperience.startDate" />
+          <FormKeyboardDatePicker label="Začiatok" name="workExperience.startDate" defaultValue="" />
         </Grid>
 
         <Grid item xs={4}>
-          <FormKeyboardDatePicker label="Koniec" name="workExperience.endDate" />
+          <FormKeyboardDatePicker label="Koniec" name="workExperience.endDate" defaultValue="" />
         </Grid>
 
         <Grid item xs={2}>
           <FormControl>
             <FormLabel>Stále tu pracujem.</FormLabel>
-            <FormSwitch name="workExperience.stillWorks" />
+            <FormSwitch name="workExperience.stillWorks" defaultValue={false} />
           </FormControl>
         </Grid>
 
@@ -74,6 +78,7 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
               placeholder="Môžeš napísať krátky sumár o tom, čo si robil v tejto spoločnosti."
               multiline
               rows={6}
+              defaultValue=""
             />
           </FormControl>
         </Grid>

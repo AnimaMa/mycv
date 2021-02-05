@@ -18,60 +18,60 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
       <Grid container justify="flex-start" spacing={3}>
         <Grid item xs={2}>
           <FormControl id="name-input">
-            <FormInput name="titleBefore" placeholder="Titul pred menom" />
+            <FormInput name="basics.titleBefore" placeholder="Titul pred menom" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="firstName" placeholder="Meno" />
+            <FormInput name="basics.firstName" defaultValue="" placeholder="Meno" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="lastName" placeholder="Priezvisko" />
+            <FormInput name="basics.lastName" defaultValue="" placeholder="Priezvisko" />
           </FormControl>
         </Grid>
 
         <Grid item xs={2}>
           <FormControl>
-            <FormInput name="titleAfter" placeholder="Titul za menom" />
+            <FormInput name="basics.titleAfter" defaultValue="" placeholder="Titul za menom" />
           </FormControl>
         </Grid>
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="phone" placeholder="Telefónne číslo" />
-          </FormControl>
-        </Grid>
-
-        <Grid item xs={3}>
-          <FormControl>
-            <FormInput name="email" placeholder="Email" />
+            <FormInput name="basics.phone" defaultValue="" placeholder="Telefónne číslo" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.address" placeholder="Adresa" />
+            <FormInput name="basics.email" defaultValue="" placeholder="Email" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.city" placeholder="Mesto" />
+            <FormInput name="location.address" defaultValue="" placeholder="Adresa" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.postalCode" placeholder="PSC" />
+            <FormInput name="location.city" defaultValue="" placeholder="Mesto" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.country" placeholder="Krajina" />
+            <FormInput name="location.postalCode" defaultValue="" placeholder="PSC" />
+          </FormControl>
+        </Grid>
+
+        <Grid item xs={3}>
+          <FormControl>
+            <FormInput name="location.country" defaultValue="" placeholder="Krajina" />
           </FormControl>
         </Grid>
       </Grid>
@@ -83,24 +83,28 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         </Grid>
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.customWebsite" placeholder="Tvoj web - Ak máš online svoje portfólio" />
+            <FormInput
+              name="networks.customWebsite"
+              placeholder="Tvoj web - Ak máš online svoje portfólio"
+              defaultValue=""
+            />
           </FormControl>
         </Grid>
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.linkedin" placeholder="Linkedin" />
+            <FormInput name="networks.linkedin" placeholder="Linkedin" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.github" placeholder="Github" />
+            <FormInput name="networks.github" placeholder="Github" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.gitlab" placeholder="Gitlab" />
+            <FormInput name="networks.gitlab" placeholder="Gitlab" defaultValue="" />
           </FormControl>
         </Grid>
       </Grid>

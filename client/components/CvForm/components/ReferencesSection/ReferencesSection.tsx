@@ -17,25 +17,25 @@ const ReferencesSectionInner = (props: ReferencesSectionProps) => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="reference.name" placeholder="Meno" />
+            <FormInput name="reference.name" placeholder="Meno" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="reference.position" placeholder="Pozícia" />
+            <FormInput name="reference.position" placeholder="Pozícia" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={4}>
           <FormControl>
-            <FormInput name="reference.company" placeholder="Spoločnosť" />
+            <FormInput name="reference.company" placeholder="Spoločnosť" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={12}>
           <FormControl>
-            <FormInput name="reference.reference" placeholder="Referencia" multiline rows={4} />
+            <FormInput name="reference.reference" placeholder="Referencia" multiline rows={4} defaultValue="" />
           </FormControl>
         </Grid>
       </Grid>

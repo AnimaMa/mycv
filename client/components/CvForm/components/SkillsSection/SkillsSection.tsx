@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
-import React from "react"
+import React, { useEffect } from "react"
 import { useFieldArray, useFormContext } from "react-hook-form"
 import styled from "styled-components"
 import { FormInput } from "../../../shared/Form/FormInput/FormInput"
@@ -15,47 +15,38 @@ export interface SkillsSectionProps {
 
 const SkillsSectionInner = (props: SkillsSectionProps) => {
   const { control } = useFormContext()
-  const { fields, append, prepend, remove, swap, move, insert } = useFieldArray({
+  const { fields, append, remove } = useFieldArray({
     control,
     name: "skills",
   })
+
+  useEffect(() => {
+    append({})
+  }, [])
 
   return (
     <FormSection className={props.className}>
       <FormSectionTitle>Skills</FormSectionTitle>
       {fields.map((field, index) => (
-        <Grid container spacing={2}>
+        <Grid key={field.id} container spacing={2}>
           <Grid item xs={4}>
             <FormControl>
-              <FormInput
-                key={field.id}
-                name={`skill[${index}].name`}
-                placeholder="Názov"
-                defaultValue={field.value}
-                rules={{}}
-              />
+              <FormInput name={`skill[${index}].name`} placeholder="Názov" defaultValue="" rules={{}} />
             </FormControl>
           </Grid>
 
           <Grid item xs={2}>
             <FormControl>
-              <FormInput
-                key={field.id}
-                name={`skill[${index}].level`}
-                placeholder="Stupeň"
-                defaultValue={field.value}
-                rules={{}}
-              />
+              <FormInput name={`skill[${index}].level`} placeholder="Stupeň" defaultValue="" rules={{}} />
             </FormControl>
           </Grid>
 
           <Grid item xs={4}>
             <FormControl>
               <FormInput
-                key={field.id}
                 name={`skill[${index}].technologies`}
                 placeholder="Skill (napr. Communication, Teamwork, React, Design)"
-                defaultValue={field.value}
+                defaultValue=""
                 rules={{}}
               />
             </FormControl>
@@ -66,12 +57,7 @@ const SkillsSectionInner = (props: SkillsSectionProps) => {
           </Grid>
         </Grid>
       ))}
-      <Button
-        variant="outlined"
-        color="primary"
-        type="button"
-        onClick={() => append({ firstName: "appendBill", lastName: "appendLuo" })}
-      >
+      <Button variant="outlined" color="primary" type="button" onClick={() => append({})}>
         Pridať skill
       </Button>
     </FormSection>
