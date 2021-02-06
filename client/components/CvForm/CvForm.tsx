@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { FormProvider, useForm } from "react-hook-form"
 import { BasicsSection } from "./components/BasicsSection/BasicsSection"
@@ -11,25 +11,61 @@ import { LanguagesSection } from "./components/LanguagesSection/LanguagesSection
 import { InterestsSection } from "./components/InterestsSection/InterestsSection"
 import { ReferencesSection } from "./components/ReferencesSection/ReferencesSection"
 import { CoursesSection } from "./components/CoursesSection/CoursesSection"
-import { useMutation } from "react-query"
-import axios from "axios"
+import { useMutation, useQuery } from "react-query"
 import { api } from "../../lib/api"
+import { nanoid } from "nanoid"
 
 export interface CvFormProps {
   className?: string
 }
 
 const CvFormInner = (props: CvFormProps) => {
+  const [uid, setUid] = useState(nanoid())
+  // const cvUid = nanoid()
+  console.log(uid, "tu")
+
+  const fetchUsers = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users")
+    return res.json()
+  }
+
+  const getExist = () => {
+    const data = api
+      .get(`/resumes?uid=${uid}`)
+      .then(function (response) {
+        if (response.data.length > 0) {
+          setUid(nanoid())
+
+          return response
+        }
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+
+    console.log(data, "daddada")
+  }
+  const volamHook = () => {
+    const mmm = `/resumes?uid=${uid}`
+    const { data, status } = useQuery(mmm, getExist)
+    console.log(data)
+  }
+  volamHook()
+
+  useEffect(() => {
+    // console.log(cvUid)
+    // 4f90d13a42
+  }, [uid])
+
   const rhfMethods = useForm()
   const { register, handleSubmit, watch } = rhfMethods
 
-  const { mutate } = useMutation((values: any) => api({ url: `/resumes`, data: values, method: "POST" }), {
-    onSuccess: () => {
-      // Query Invalidations
-      // queryCache.invalidateQueries('todos')
-      console.log("yes")
-    },
-  })
+  const { mutate } = useMutation(
+    (values: any) => api({ url: `/resumes`, data: { ...values, uid: uid }, method: "POST" }),
+    {
+      onSuccess: () => {},
+    }
+  )
 
   const onSubmit = (values) => {
     mutate(values)

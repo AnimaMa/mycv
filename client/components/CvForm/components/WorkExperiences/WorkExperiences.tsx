@@ -102,7 +102,7 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
       ))}
 
       <Button variant="outlined" color="primary" type="button" onClick={() => append({})}>
-        Pridať vzdelanie
+        Pridať pracovné skúsenosti
       </Button>
     </FormSection>
   )
