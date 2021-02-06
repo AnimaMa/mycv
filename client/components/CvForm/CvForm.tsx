@@ -11,6 +11,9 @@ import { LanguagesSection } from "./components/LanguagesSection/LanguagesSection
 import { InterestsSection } from "./components/InterestsSection/InterestsSection"
 import { ReferencesSection } from "./components/ReferencesSection/ReferencesSection"
 import { CoursesSection } from "./components/CoursesSection/CoursesSection"
+import { useMutation } from "react-query"
+import axios from "axios"
+import { api } from "../../lib/api"
 
 export interface CvFormProps {
   className?: string
@@ -20,7 +23,18 @@ const CvFormInner = (props: CvFormProps) => {
   const rhfMethods = useForm()
   const { register, handleSubmit, watch } = rhfMethods
 
-  const onSubmit = (data) => console.log(data)
+  const { mutate } = useMutation((values: any) => api({ url: `/resumes`, data: values, method: "POST" }), {
+    onSuccess: () => {
+      // Query Invalidations
+      // queryCache.invalidateQueries('todos')
+      console.log("yes")
+    },
+  })
+
+  const onSubmit = (values) => {
+    mutate(values)
+  }
+
   return (
     <div className={props.className}>
       <FormProvider {...rhfMethods}>

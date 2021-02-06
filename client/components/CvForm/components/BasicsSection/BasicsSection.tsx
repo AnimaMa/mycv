@@ -53,25 +53,25 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.address" defaultValue="" placeholder="Adresa" />
+            <FormInput name="basics.location.address" defaultValue="" placeholder="Adresa" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.city" defaultValue="" placeholder="Mesto" />
+            <FormInput name="basics.location.city" defaultValue="" placeholder="Mesto" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.postalCode" defaultValue="" placeholder="PSC" />
+            <FormInput name="basics.location.postalCode" defaultValue="" placeholder="PSC" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="location.country" defaultValue="" placeholder="Krajina" />
+            <FormInput name="basics.location.country" defaultValue="" placeholder="Krajina" />
           </FormControl>
         </Grid>
       </Grid>
@@ -84,7 +84,7 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         <Grid item xs={3}>
           <FormControl>
             <FormInput
-              name="networks.customWebsite"
+              name="basics.networks.customWebsite"
               placeholder="Tvoj web - Ak máš online svoje portfólio"
               defaultValue=""
             />
@@ -92,19 +92,19 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         </Grid>
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.linkedin" placeholder="Linkedin" defaultValue="" />
+            <FormInput name="basics.networks.linkedin" placeholder="Linkedin" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.github" placeholder="Github" defaultValue="" />
+            <FormInput name="basics.networks.github" placeholder="Github" defaultValue="" />
           </FormControl>
         </Grid>
 
         <Grid item xs={3}>
           <FormControl>
-            <FormInput name="networks.gitlab" placeholder="Gitlab" defaultValue="" />
+            <FormInput name="basics.networks.gitlab" placeholder="Gitlab" defaultValue="" />
           </FormControl>
         </Grid>
       </Grid>
