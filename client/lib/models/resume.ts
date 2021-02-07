@@ -1,4 +1,4 @@
-export module Resumes {
+declare module Resumes {
   export interface Networks {
     id: number
     linkedin: string
@@ -139,3 +139,5 @@ export module Resumes {
     interest: Interest[]
   }
 }
+
+export {}
