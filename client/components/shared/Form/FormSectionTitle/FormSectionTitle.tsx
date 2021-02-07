@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "styled-components"
+import { theme } from "../../Theme/Theme"
 
 export interface FormSectionTitleProps {
   className?: string
@@ -11,7 +12,7 @@ const FormSectionTitleInner = (props: FormSectionTitleProps) => {
 }
 
 export const FormSectionTitle = styled(FormSectionTitleInner)`
-  color: ${(props) => props.theme.color.primary};
+  color: ${theme.color.primary};
   font-size: 30px;
   margin: 10px 0;
   line-height: 38px;

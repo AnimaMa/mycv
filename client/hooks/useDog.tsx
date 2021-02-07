@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { api } from "../lib/api";
+import { api } from "../lib/api/api";
 
 export const useDog = (dogId: string) => {
   const { data, isLoading } = useQuery(["useDog", { dogId }], () =>

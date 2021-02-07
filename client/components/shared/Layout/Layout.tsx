@@ -1,5 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components"
-import { MyTheme } from "../Theme/Theme"
+import { theme } from "../Theme/Theme"
 import { GlobalStyle } from "../Theme/GlobalStyle"
 import React, { ReactNode } from "react"
 // import Footer from "./components/Footer/Footer";
@@ -15,7 +15,7 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   return (
     <div className={`${props?.className} ${props.bgColor ? "with-bg-color" : ""}`}>
-      <ThemeProvider theme={MyTheme}>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header />
         <main>{props.children}</main>

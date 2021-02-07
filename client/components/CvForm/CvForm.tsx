@@ -11,65 +11,35 @@ import { LanguagesSection } from "./components/LanguagesSection/LanguagesSection
 import { InterestsSection } from "./components/InterestsSection/InterestsSection"
 import { ReferencesSection } from "./components/ReferencesSection/ReferencesSection"
 import { CoursesSection } from "./components/CoursesSection/CoursesSection"
-import { useMutation, useQuery } from "react-query"
-import { api } from "../../lib/api"
+import { useMutation, useQuery, QueryClient, useQueryClient } from "react-query"
+import { api } from "../../lib/api/api"
 import { nanoid } from "nanoid"
+import { useGeneratedUid } from "./hooks/useGeneratedUid"
+import { useRouter } from "next/router"
+import { CircularProgress } from "@material-ui/core"
+import { generateResumeRoute } from "../../lib/routes"
 
 export interface CvFormProps {
   className?: string
 }
 
 const CvFormInner = (props: CvFormProps) => {
-  const [uid, setUid] = useState(nanoid())
-  // const cvUid = nanoid()
-  console.log(uid, "tu")
-
-  const fetchUsers = async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users")
-    return res.json()
-  }
-
-  const getExist = () => {
-    const data = api
-      .get(`/resumes?uid=${uid}`)
-      .then(function (response) {
-        if (response.data.length > 0) {
-          setUid(nanoid())
-
-          return response
-        }
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
-
-    console.log(data, "daddada")
-  }
-  const volamHook = () => {
-    const mmm = `/resumes?uid=${uid}`
-    const { data, status } = useQuery(mmm, getExist)
-    console.log(data)
-  }
-  volamHook()
-
-  useEffect(() => {
-    // console.log(cvUid)
-    // 4f90d13a42
-  }, [uid])
+  const { uid } = useGeneratedUid()
+  const router = useRouter()
 
   const rhfMethods = useForm()
   const { register, handleSubmit, watch } = rhfMethods
 
-  const { mutate } = useMutation(
+  const { mutate, isLoading } = useMutation(
     (values: any) => api({ url: `/resumes`, data: { ...values, uid: uid }, method: "POST" }),
     {
-      onSuccess: () => {},
+      onSuccess: () => {
+        router.push(generateResumeRoute(uid))
+      },
     }
   )
 
-  const onSubmit = (values) => {
-    mutate(values)
-  }
+  const onSubmit = (values) => mutate(values)
 
   return (
     <div className={props.className}>
@@ -85,8 +55,15 @@ const CvFormInner = (props: CvFormProps) => {
           <ReferencesSection />
 
           <Grid container justify="center">
-            <Button variant="contained" color="primary" type="submit" className="btn btn-primary">
-              Create
+            <Button disabled={isLoading} variant="contained" color="primary" type="submit" className="btn btn-primary">
+              {isLoading ? (
+                <div>
+                  <CircularProgress size={20} color="secondary" />
+                  Vytvaram CV
+                </div>
+              ) : (
+                <div>Vytvorit</div>
+              )}
             </Button>
           </Grid>
         </form>

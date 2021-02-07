@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
-import { MyTheme } from "./Theme"
-export const GlobalStyle = createGlobalStyle<{ theme: typeof MyTheme }>`
+import { theme } from "./Theme"
+export const GlobalStyle = createGlobalStyle<{ theme: typeof theme }>`
    html {
       /* height:100%;
       font-size: 62.5%;

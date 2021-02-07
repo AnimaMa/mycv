@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core"
 
-export const MyTheme = {
+export const theme = {
   name: "Default",
   fonts: {
     primaryFont: ["Lato", "sans-serif"].join(","),
