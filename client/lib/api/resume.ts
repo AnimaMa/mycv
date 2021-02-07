@@ -1,3 +1,4 @@
+import { Resumes } from "../models/resume"
 import { graphqlApi } from "./api"
 
 export const getAllResumeUids = async (): Promise<string[]> => {

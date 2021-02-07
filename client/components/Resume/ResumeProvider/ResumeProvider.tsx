@@ -1,4 +1,5 @@
 import React, { createContext, ReactNode, useContext } from "react"
+import { Resumes } from "../../../lib/models/resume"
 
 const ResumeContext = createContext<Resumes.Resume>(null)
 

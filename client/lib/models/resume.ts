@@ -1,4 +1,4 @@
-declare module Resumes {
+export declare module Resumes {
   export interface Networks {
     id: number
     linkedin: string

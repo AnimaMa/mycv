@@ -3,6 +3,7 @@ import React from "react"
 import { BasicsDisplaySection } from "../../components/Resume/BasicsSection/BasicsSection"
 import { ResumeProvider } from "../../components/Resume/ResumeProvider/ResumeProvider"
 import { getAllResumeUids, getResume } from "../../lib/api/resume"
+import { Resumes } from "../../lib/models/resume"
 import { generateResumeRoute } from "../../lib/routes"
 
 interface ResumePageProps {
