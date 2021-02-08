@@ -1,3 +1,4 @@
+import { Box, Divider, FormLabel } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
@@ -23,41 +24,52 @@ const ReferencesSectionInner = (props: ReferencesSectionProps) => {
     <FormSection className={props.className}>
       <FormSectionTitle>Referencie</FormSectionTitle>
       {fields.map((reference, index) => (
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput name={`reference[${index}].name`} placeholder="Meno" defaultValue="" />
-            </FormControl>
-          </Grid>
+        <Box my={6} key={reference.id}>
+          <Grid container>
+            <Grid container xs={10} spacing={2}>
+              <Grid item sm={6} xs={12}>
+                <FormControl>
+                  <FormLabel>Meno referenta</FormLabel>
+                  <FormInput name={`reference[${index}].name`} placeholder="Albus Dumbledore" defaultValue="" />
+                </FormControl>
+              </Grid>
 
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput name={`reference[${index}].position`} placeholder="Pozícia" defaultValue="" />
-            </FormControl>
-          </Grid>
+              <Grid item sm={6} xs={12}>
+                <FormControl>
+                  <FormLabel>Pozícia referenta</FormLabel>
+                  <FormInput name={`reference[${index}].position`} placeholder="CEO" defaultValue="" />
+                </FormControl>
+              </Grid>
 
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput name={`reference[${index}].company`} placeholder="Spoločnosť" defaultValue="" />
-            </FormControl>
-          </Grid>
+              <Grid item xs={12}>
+                <FormControl>
+                  <FormLabel>Názov firmy / spoločnosti</FormLabel>
+                  <FormInput name={`reference[${index}].company`} placeholder="Rockford s.r.o " defaultValue="" />
+                </FormControl>
+              </Grid>
 
-          <Grid item xs={12}>
-            <FormControl>
-              <FormInput
-                name={`reference[${index}].reference`}
-                placeholder="Referencia"
-                multiline
-                rows={4}
-                defaultValue=""
-              />
-            </FormControl>
-          </Grid>
+              <Grid item xs={12}>
+                <FormControl>
+                  <FormLabel>Referencia</FormLabel>
+                  <FormInput
+                    name={`reference[${index}].reference`}
+                    placeholder="Hermiona Grangere je veľmi úspešná v študovaní...."
+                    multiline
+                    rows={4}
+                    defaultValue=""
+                  />
+                </FormControl>
+              </Grid>
+            </Grid>
 
-          <Grid item xs={2}>
-            <TooltipDelete onClick={() => remove(index)} />
+            <Grid container item xs={2} justify="flex-end">
+              <TooltipDelete onClick={() => remove(index)} />
+            </Grid>
           </Grid>
-        </Grid>
+          <Box marginTop={3}>
+            <Divider light />
+          </Box>
+        </Box>
       ))}
       <Button variant="outlined" color="primary" type="button" onClick={() => append({})}>
         Pridať referenciu

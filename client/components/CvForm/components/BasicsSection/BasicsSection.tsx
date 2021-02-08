@@ -25,14 +25,14 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         <Grid item sm={3} xs={6}>
           <FormControl>
             <FormLabel>Meno</FormLabel>
-            <FormInput name="basics.firstName" defaultValue="" placeholder="Hermiona" />
+            <FormInput required name="basics.firstName" defaultValue="" placeholder="Hermiona" />
           </FormControl>
         </Grid>
 
         <Grid item sm={4} xs={6}>
           <FormControl>
             <FormLabel>Priezvisko</FormLabel>
-            <FormInput name="basics.lastName" defaultValue="" placeholder="Granger" />
+            <FormInput required name="basics.lastName" defaultValue="" placeholder="Granger" />
           </FormControl>
         </Grid>
 
@@ -45,14 +45,14 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         <Grid item sm={6} xs={6}>
           <FormControl>
             <FormLabel>Telefónne číslo</FormLabel>
-            <FormInput name="basics.phone" defaultValue="" placeholder="09000 000 000" />
+            <FormInput required name="basics.phone" defaultValue="" placeholder="09000 000 000" />
           </FormControl>
         </Grid>
 
         <Grid item sm={6} xs={6}>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <FormInput name="basics.email" defaultValue="" placeholder="hermiona@rokfort.com" />
+            <FormInput required name="basics.email" defaultValue="" placeholder="hermiona@rokfort.com" />
           </FormControl>
         </Grid>
       </Grid>

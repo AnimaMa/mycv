@@ -1,4 +1,6 @@
+import { Box } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
+import Divider from "@material-ui/core/Divider"
 import FormControl from "@material-ui/core/FormControl"
 import FormLabel from "@material-ui/core/FormLabel"
 import Grid from "@material-ui/core/Grid"
@@ -27,77 +29,100 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
       <FormSectionTitle>Pracovné skúsenosti </FormSectionTitle>
 
       {fields.map((field, index) => (
-        <Grid container spacing={2} key={field.id}>
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput name={`workExperience[${index}].company`} placeholder="Spoločnosť" defaultValue="" />
-            </FormControl>
+        <Box my={6} key={field.id}>
+          <Grid container>
+            <Grid container spacing={2} xs={10}>
+              <Grid item sm={6} xs={12}>
+                <FormControl>
+                  <FormLabel>Názov spoločnosti</FormLabel>
+
+                  <FormInput name={`workExperience[${index}].company`} placeholder="Rockford company" defaultValue="" />
+                </FormControl>
+              </Grid>
+
+              <Grid item sm={6} xs={12}>
+                <FormControl>
+                  <FormLabel>Tvoja pozícia</FormLabel>
+                  <FormInput
+                    name={`workExperience[${index}].position`}
+                    placeholder="Učiteľka metlobalu"
+                    defaultValue=""
+                  />
+                </FormControl>
+              </Grid>
+
+              <Grid item xs={12}>
+                <FormControl>
+                  <FormLabel>Technológie s ktorými si pracoval</FormLabel>
+                  <FormInput
+                    name={`workExperience[${index}].usedTechnologies`}
+                    placeholder="React, Laravel, Node, ..."
+                    defaultValue=""
+                  />
+                </FormControl>
+              </Grid>
+
+              <Grid item xs={12}>
+                <FormControl>
+                  <FormLabel>
+                    Webstránka spoločnosti <span className="text-xs">ak to uznáš za potrebné</span>
+                  </FormLabel>
+                  <FormInput
+                    name={`workExperience[${index}].website`}
+                    placeholder="http://google.com/"
+                    defaultValue=""
+                  />
+                </FormControl>
+              </Grid>
+
+              <Grid item xs={12}>
+                <FormSectionSubtitle>Trvanie</FormSectionSubtitle>
+              </Grid>
+
+              <Grid item sm={4} xs={12}>
+                <FormLabel>Od</FormLabel>
+                <FormKeyboardDatePicker label="Začiatok" name={`workExperience[${index}].startDate`} />
+              </Grid>
+
+              <Grid item sm={4} xs={12}>
+                <FormLabel>Do</FormLabel>
+                <FormKeyboardDatePicker label="Koniec" name={`workExperience[${index}].endDate`} />
+              </Grid>
+
+              <Grid item sm={4} xs={12}>
+                <FormControl>
+                  <FormLabel>Stále tu pracujem.</FormLabel>
+                  <FormSwitch name={`workExperience[${index}].stillWorks`} />
+                </FormControl>
+              </Grid>
+
+              <Grid item xs={12}>
+                <FormSectionSubtitle>Krátky sumár</FormSectionSubtitle>
+              </Grid>
+
+              <Grid item xs={12}>
+                <FormControl>
+                  <FormLabel>Napíš všetko čo uznáš za vhodné</FormLabel>
+                  <FormInput
+                    name={`workExperience[${index}].summary`}
+                    placeholder="Môžeš napísať krátky sumár o tom, čo si robil v tejto spoločnosti."
+                    multiline
+                    rows={6}
+                    defaultValue=""
+                  />
+                </FormControl>
+              </Grid>
+            </Grid>
+
+            <Grid container item xs={2} justify="flex-end" alignItems="center">
+              <TooltipDelete onClick={() => remove(index)} />
+            </Grid>
           </Grid>
 
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput name={`workExperience[${index}].position`} placeholder="Pozícia" defaultValue="" />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput
-                name={`workExperience[${index}].usedTechnologies`}
-                placeholder="Technológie s ktorými si pracoval"
-                defaultValue=""
-              />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={4}>
-            <FormControl>
-              <FormInput
-                name={`workExperience[${index}].website`}
-                placeholder="Odkaz na ich webstránku"
-                defaultValue=""
-              />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={12}>
-            <FormSectionSubtitle>Trvanie</FormSectionSubtitle>
-          </Grid>
-
-          <Grid item xs={4}>
-            <FormKeyboardDatePicker label="Začiatok" name={`workExperience[${index}].startDate`} />
-          </Grid>
-
-          <Grid item xs={4}>
-            <FormKeyboardDatePicker label="Koniec" name={`workExperience[${index}].endDate`} />
-          </Grid>
-
-          <Grid item xs={2}>
-            <FormControl>
-              <FormLabel>Stále tu pracujem.</FormLabel>
-              <FormSwitch name={`workExperience[${index}].stillWorks`} />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={12}>
-            <FormSectionSubtitle>Krátky sumár</FormSectionSubtitle>
-          </Grid>
-
-          <Grid item xs={12}>
-            <FormControl>
-              <FormInput
-                name={`workExperience[${index}].summary`}
-                placeholder="Môžeš napísať krátky sumár o tom, čo si robil v tejto spoločnosti."
-                multiline
-                rows={6}
-                defaultValue=""
-              />
-            </FormControl>
-          </Grid>
-          <Grid item xs={12}>
-            <TooltipDelete onClick={() => remove(index)} />
-          </Grid>
-        </Grid>
+          <Box marginTop={3}>
+            <Divider light />
+          </Box>
+        </Box>
       ))}
 
       <Button variant="outlined" color="primary" type="button" onClick={() => append({})}>

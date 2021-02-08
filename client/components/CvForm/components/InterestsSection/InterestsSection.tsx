@@ -1,5 +1,7 @@
+import { Box } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
+import FormLabel from "@material-ui/core/FormLabel"
 import Grid from "@material-ui/core/Grid"
 import React from "react"
 import { useFieldArray, useFormContext } from "react-hook-form"
@@ -14,30 +16,29 @@ export interface InterestsSectionProps {
 
 const InterestsSectionInner = (props: InterestsSectionProps) => {
   const { control } = useFormContext()
-  const { fields, append, prepend, remove, swap, move, insert } = useFieldArray({
+  const { fields, append, remove } = useFieldArray({
     control,
     name: "interests",
   })
   return (
     <FormSection className={props.className}>
       <FormSectionTitle>Záujmy</FormSectionTitle>
-      <Grid container spacing={2}>
-        {fields.map((interest, index) => (
-          <Grid item xs={6} key={interest.id}>
-            <Grid container>
-              <Grid item xs={9}>
-                <FormControl>
-                  <FormInput name={`interest[${index}].name`} placeholder="Názov" defaultValue="" />
-                </FormControl>
-              </Grid>
+      {fields.map((interest, index) => (
+        <Box my={6} key={interest.id}>
+          <Grid container xs={12} spacing={2}>
+            <Grid item xs={10}>
+              <FormControl>
+                <FormLabel>Záujem / Hobby</FormLabel>
+                <FormInput name={`interest[${index}].name`} placeholder="Čítanie kníh" defaultValue="" />
+              </FormControl>
+            </Grid>
 
-              <Grid item xs={3}>
-                <TooltipDelete onClick={() => remove(index)} />
-              </Grid>
+            <Grid container item xs={2} justify="flex-end">
+              <TooltipDelete onClick={() => remove(index)} />
             </Grid>
           </Grid>
-        ))}
-      </Grid>
+        </Box>
+      ))}
       <Button
         variant="outlined"
         color="primary"

@@ -9,7 +9,7 @@ export interface FormSectionProps {
 const FormSectionInner = (props: FormSectionProps) => {
   return (
     <section className="my-5">
-      <Card className="md:p-14 sm:p-4 p-4">{props.children}</Card>
+      <Card className="md:p-10 sm:p-4 p-4">{props.children}</Card>
     </section>
   )
 }
