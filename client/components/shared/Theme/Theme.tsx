@@ -1,10 +1,11 @@
 import { createMuiTheme } from "@material-ui/core"
 
+const primaryColor = "#003a8c"
 export const theme = {
   name: "Default",
   color: {
     white: "#ffffff",
-    primary: "#003a8c",
+    primary: primaryColor,
     secondary: "#1896e0",
     red: "#E8381B",
     dark: "#17232C",
@@ -13,6 +14,9 @@ export const theme = {
     black: "#000000",
     darkGray: "rgba(0, 0, 0, 0.5)",
     bgColor: "#e0dddd2e",
+  },
+  palette: {
+    primary: primaryColor,
   },
   spacing: {
     sectionMarginTop: "14rem",

@@ -27,13 +27,3 @@ const FormInputInner = (props) => {
 }
 
 export const FormInput = FormInputInner
-// export const FormInput = styled(FormInputInner)`
-//   input {
-//     font-size: 17px;
-//     height: 22px;
-//   }
-
-//   input::placeholder {
-//     font-size: 14px;
-//   }
-// `

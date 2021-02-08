@@ -6,13 +6,7 @@ export interface FormSectionTitleProps {
 }
 
 const FormSectionTitleInner = (props: FormSectionTitleProps) => {
-  return <p className={props.className}>{props.children}</p>
+  return <p className={`${props.className} text-2xl  text-primary my-6`}>{props.children}</p>
 }
 
 export const FormSectionTitle = FormSectionTitleInner
-
-//   color: ${theme.color.primary};
-//   font-size: 30px;
-//   margin: 10px 0;
-//   line-height: 38px;
-// `

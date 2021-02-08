@@ -8,18 +8,10 @@ export interface FormSectionProps {
 
 const FormSectionInner = (props: FormSectionProps) => {
   return (
-    <section className={"my-5"}>
-      <Card className="p-14">{props.children}</Card>
+    <section className="my-5">
+      <Card className="md:p-14 sm:p-4 p-4">{props.children}</Card>
     </section>
   )
 }
 
 export const FormSection = FormSectionInner
-
-// export const FormSection = styled(FormSectionInner)`
-//   margin: 25px 0;
-
-//   .card {
-//     padding: 25px 50px;
-//   }
-// `

@@ -2,6 +2,7 @@ import Container from "@material-ui/core/Container"
 import Link from "next/link"
 import Image from "next/image"
 import React from "react"
+import { routes } from "./routes"
 
 export interface HeaderProps {
   className?: string
@@ -15,14 +16,15 @@ const HeaderInner = (props: HeaderProps) => {
           <Link href="/">
             <Image src="/img/logo.svg" alt="cloudresume logo" width={90} height={75} />
           </Link>
-          <div className="space-x-5">
-            <Link href="/">
-              <a>Home</a>
-            </Link>
 
-            <Link href="/create-resume">
-              <a>Create Resume</a>
-            </Link>
+          <div className="space-x-5">
+            {routes.map((route) => (
+              <Link href={route.href} key={route.label}>
+                <a className="  text-primary  hover:text-secondary transition duration-300 font-bold text-lg  ">
+                  {route.label}
+                </a>
+              </Link>
+            ))}
           </div>
         </nav>
       </div>
@@ -31,20 +33,3 @@ const HeaderInner = (props: HeaderProps) => {
 }
 
 export const Header = HeaderInner
-
-/* height: 80px;
-
-  .custom-container {
-    height: 100%;
-  }
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-
-    a {
-      margin: 0 8px;
-    }
-  }
-` */
