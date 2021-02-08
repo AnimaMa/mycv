@@ -5,7 +5,7 @@ import React from "react"
 
 export interface TooltipDeleteProps {
   className?: string
-  onClick(): () => {}
+  onClick: () => void
 }
 
 const TooltipDeleteInner = (props: TooltipDeleteProps) => {
