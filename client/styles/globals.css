@@ -18,12 +18,11 @@ section {
 
 * {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
   text-decoration: none;
-
-  color: #17232C;
 }
 
 
@@ -36,9 +35,9 @@ h4 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 65px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 75px;
 
 }
 

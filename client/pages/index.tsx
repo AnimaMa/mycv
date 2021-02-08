@@ -1,6 +1,7 @@
 import Container from "@material-ui/core/Container"
 import Head from "next/head"
 import React from "react"
+import { Hero } from "../components/Home/Hero/Hero"
 import Layout from "../components/shared/Layout/Layout"
 
 export default function Home() {
@@ -14,9 +15,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />
       </Head>
       <Layout>
-        <Container>
-          <h1>welcome</h1>
-        </Container>
+        <Hero />
       </Layout>
     </div>
   )

@@ -1,0 +1,13 @@
+.bgWrap {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hero  {
+  max-width: 100vw;
+  overflow: hidden;
+}

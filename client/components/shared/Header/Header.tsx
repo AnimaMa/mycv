@@ -1,5 +1,6 @@
 import Container from "@material-ui/core/Container"
 import Link from "next/link"
+import Image from "next/image"
 import React from "react"
 
 export interface HeaderProps {
@@ -8,23 +9,19 @@ export interface HeaderProps {
 
 const HeaderInner = (props: HeaderProps) => {
   return (
-    <header className={"py-8"}>
+    <header className="top-0 p-y-5">
       <div className="container mx-auto">
-        <nav className="navigation flex justify-between">
+        <nav className="navigation flex justify-between items-center">
           <Link href="/">
-            <a>Logo</a>
+            <Image src="/img/logo.svg" alt="cloudresume logo" width={90} height={75} />
           </Link>
           <div className="space-x-5">
             <Link href="/">
-              <a>Back to home</a>
+              <a>Home</a>
             </Link>
 
-            <Link href="/resume">
-              <a>Resume</a>
-            </Link>
-
-            <Link href="/create-cv">
-              <a>Form</a>
+            <Link href="/create-resume">
+              <a>Create Resume</a>
             </Link>
           </div>
         </nav>

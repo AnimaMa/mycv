@@ -2,9 +2,6 @@ import { createMuiTheme } from "@material-ui/core"
 
 export const theme = {
   name: "Default",
-  fonts: {
-    primaryFont: ["Lato", "sans-serif"].join(","),
-  },
   color: {
     white: "#ffffff",
     primary: "#003a8c",
