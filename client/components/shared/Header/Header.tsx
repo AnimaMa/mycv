@@ -8,11 +8,13 @@ export interface HeaderProps {
 
 const HeaderInner = (props: HeaderProps) => {
   return (
-    <header className={props.className}>
-      <Container className="custom-container">
-        <nav className="navigation">
-          <p>logo</p>
-          <div>
+    <header className={"py-8"}>
+      <div className="container mx-auto">
+        <nav className="navigation flex justify-between">
+          <Link href="/">
+            <a>Logo</a>
+          </Link>
+          <div className="space-x-5">
             <Link href="/">
               <a>Back to home</a>
             </Link>
@@ -21,16 +23,12 @@ const HeaderInner = (props: HeaderProps) => {
               <a>Resume</a>
             </Link>
 
-            <Link href="/dog/1">
-              <a>dog1?</a>
-            </Link>
-
             <Link href="/create-cv">
               <a>Form</a>
             </Link>
           </div>
         </nav>
-      </Container>
+      </div>
     </header>
   )
 }

@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "react-query"
 import "tailwindcss/tailwind.css"
+import "../styles/globals.css"
 import "../components/shared/Theme/Theme"
 
 const queryClient = new QueryClient()

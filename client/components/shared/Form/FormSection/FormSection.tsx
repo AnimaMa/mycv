@@ -8,8 +8,8 @@ export interface FormSectionProps {
 
 const FormSectionInner = (props: FormSectionProps) => {
   return (
-    <section className={props.className}>
-      <Card className="card">{props.children}</Card>
+    <section className={"my-5"}>
+      <Card className="p-14">{props.children}</Card>
     </section>
   )
 }

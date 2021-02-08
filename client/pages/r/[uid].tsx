@@ -1,6 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next"
 import React from "react"
-import { BasicsDisplaySection } from "../../components/Resume/BasicsSection/BasicsSection"
 import { ResumeProvider } from "../../components/Resume/ResumeProvider/ResumeProvider"
 import { getAllResumeUids, getResume } from "../../lib/api/resume"
 import { Resumes } from "../../lib/models/resume"
@@ -16,7 +15,7 @@ export const ResumePage = (props: ResumePageProps) => {
   return (
     <div>
       <ResumeProvider resume={resume}>
-        <BasicsDisplaySection />
+        <div></div>
       </ResumeProvider>
     </div>
   )

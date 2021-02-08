@@ -1,5 +1,4 @@
-import { Box, Container } from "@material-ui/core"
-import Head from "next/head"
+import { Box } from "@material-ui/core"
 import React from "react"
 import { CvForm } from "../components/CvForm/CvForm"
 import Layout from "../components/shared/Layout/Layout"
@@ -10,14 +9,14 @@ export default function CreateCv() {
     <div className="create-cv-page">
       <Layout bgColor={true} className="layout_create-cv">
         <PageHeader />
-        <Container>
+        <div className="container mx-auto">
           <section>
             <Box m={3}>
               <h1 className="tac">Vytvor si svoj CV</h1>
             </Box>
             <CvForm />
           </section>
-        </Container>
+        </div>
       </Layout>
     </div>
   )
