@@ -1,13 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-
+import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
+import React from "react"
+import { useFieldArray, useFormContext } from "react-hook-form"
 import { FormInput } from "../../../shared/Form/FormInput/FormInput"
 import { FormSection } from "../../../shared/Form/FormSection/FormSection"
 import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
-import { useFieldArray, useFormContext } from "react-hook-form"
-import Button from "@material-ui/core/Button"
 import { TooltipDelete } from "../../../shared/Tooltips/TooltipDelete/TooltipDelete"
 
 export interface InterestsSectionProps {
@@ -52,4 +50,4 @@ const InterestsSectionInner = (props: InterestsSectionProps) => {
   )
 }
 
-export const InterestsSection = styled(InterestsSectionInner)``
+export const InterestsSection = InterestsSectionInner

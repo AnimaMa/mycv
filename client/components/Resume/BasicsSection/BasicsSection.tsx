@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { NameDisplay } from "./components/NameDisplay"
 
 export interface BasicsSectionProps {
@@ -14,4 +13,4 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
   )
 }
 
-export const BasicsDisplaySection = styled(BasicsSectionInner)``
+export const BasicsSection = BasicsSectionInner

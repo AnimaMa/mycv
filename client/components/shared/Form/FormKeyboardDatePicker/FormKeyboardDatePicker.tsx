@@ -3,7 +3,6 @@ import FormControl from "@material-ui/core/FormControl"
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers"
 import React from "react"
 import { Controller, useFormContext } from "react-hook-form"
-import styled from "styled-components"
 
 export interface FormKeyboardDatePickerProps {
   className?: string
@@ -41,4 +40,4 @@ const FormKeyboardDatePickerInner = (props: FormKeyboardDatePickerProps) => {
   )
 }
 
-export const FormKeyboardDatePicker = styled(FormKeyboardDatePickerInner)``
+export const FormKeyboardDatePicker = FormKeyboardDatePickerInner

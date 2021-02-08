@@ -2,7 +2,6 @@ import FormControl from "@material-ui/core/FormControl"
 import Switch from "@material-ui/core/Switch"
 import React from "react"
 import { Controller, useFormContext } from "react-hook-form"
-import styled from "styled-components"
 
 export interface FormSwitchProps {
   className?: string
@@ -25,4 +24,4 @@ const FormSwitchInner = (props: FormSwitchProps) => {
   )
 }
 
-export const FormSwitch = styled(FormSwitchInner)``
+export const FormSwitch = FormSwitchInner

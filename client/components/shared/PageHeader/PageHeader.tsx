@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 
 export interface PageHeaderProps {
   className?: string
@@ -13,7 +12,8 @@ const PageHeaderInner = (props: PageHeaderProps) => {
   )
 }
 
-export const PageHeader = styled(PageHeaderInner)`
-  min-height: 200px;
-  background-color: lightblue;
-`
+export const PageHeader = PageHeaderInner
+
+//   min-height: 200px;
+//   background-color: lightblue;
+// `

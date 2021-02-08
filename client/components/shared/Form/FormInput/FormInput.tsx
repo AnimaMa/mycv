@@ -1,7 +1,6 @@
-import React from "react"
-import { useFormContext, Controller } from "react-hook-form"
 import TextField from "@material-ui/core/TextField"
-import styled from "styled-components"
+import React from "react"
+import { Controller, useFormContext } from "react-hook-form"
 
 export interface FormInputProps {
   className?: string
@@ -27,13 +26,14 @@ const FormInputInner = (props) => {
   )
 }
 
-export const FormInput = styled(FormInputInner)`
-  input {
-    font-size: 17px;
-    height: 22px;
-  }
+export const FormInput = FormInputInner
+// export const FormInput = styled(FormInputInner)`
+//   input {
+//     font-size: 17px;
+//     height: 22px;
+//   }
 
-  input::placeholder {
-    font-size: 14px;
-  }
-`
+//   input::placeholder {
+//     font-size: 14px;
+//   }
+// `

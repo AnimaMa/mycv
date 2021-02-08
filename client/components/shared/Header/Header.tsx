@@ -1,7 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import Link from "next/link"
 import Container from "@material-ui/core/Container"
+import Link from "next/link"
+import React from "react"
 
 export interface HeaderProps {
   className?: string
@@ -36,8 +35,9 @@ const HeaderInner = (props: HeaderProps) => {
   )
 }
 
-export const Header = styled(HeaderInner)`
-  height: 80px;
+export const Header = HeaderInner
+
+/* height: 80px;
 
   .custom-container {
     height: 100%;
@@ -52,4 +52,4 @@ export const Header = styled(HeaderInner)`
       margin: 0 8px;
     }
   }
-`
+` */

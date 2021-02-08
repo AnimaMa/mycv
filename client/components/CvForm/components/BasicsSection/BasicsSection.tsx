@@ -1,7 +1,6 @@
 import { Grid } from "@material-ui/core"
 import FormControl from "@material-ui/core/FormControl"
 import React from "react"
-import styled from "styled-components"
 import { FormInput } from "../../../shared/Form/FormInput/FormInput"
 import { FormSection } from "../../../shared/Form/FormSection/FormSection"
 import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle"
@@ -112,4 +111,4 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
   )
 }
 
-export const BasicsSection = styled(BasicsSectionInner)``
+export const BasicsSection = BasicsSectionInner

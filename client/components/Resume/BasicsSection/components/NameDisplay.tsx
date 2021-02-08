@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { useResume } from "../../ResumeProvider/ResumeProvider"
 
 export interface NameDisplayProps {
@@ -11,4 +10,4 @@ const NameDisplayInner = (props: NameDisplayProps) => {
   return <div className={props.className}>meno: {resume.basics.firstName}</div>
 }
 
-export const NameDisplay = styled(NameDisplayInner)``
+export const NameDisplay = NameDisplayInner

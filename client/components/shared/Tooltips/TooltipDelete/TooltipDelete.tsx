@@ -1,9 +1,7 @@
 import IconButton from "@material-ui/core/IconButton"
 import Tooltip from "@material-ui/core/Tooltip"
-import React from "react"
 import DeleteIcon from "@material-ui/icons/Delete"
-
-import styled from "styled-components"
+import React from "react"
 
 export interface TooltipDeleteProps {
   className?: string
@@ -20,8 +18,9 @@ const TooltipDeleteInner = (props: TooltipDeleteProps) => {
   )
 }
 
-export const TooltipDelete = styled(TooltipDeleteInner)`
-  .icon-delete {
+export const TooltipDelete = TooltipDeleteInner
+
+/* .icon-delete {
     font-size: 24px;
   }
-`
+` */

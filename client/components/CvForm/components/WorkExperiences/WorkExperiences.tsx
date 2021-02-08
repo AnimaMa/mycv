@@ -1,16 +1,15 @@
+import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import FormLabel from "@material-ui/core/FormLabel"
 import Grid from "@material-ui/core/Grid"
 import React from "react"
-import styled from "styled-components"
-import { FormInput } from "../../../shared/Form/FormInput/FormInput"
-import { FormSection } from "../../../shared/Form/FormSection/FormSection"
-import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
-import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle"
-import { FormKeyboardDatePicker } from "../../../shared/Form/FormKeyboardDatePicker/FormKeyboardDatePicker"
-import { FormSwitch } from "../../../shared/Form/FormSwitch/FormSwitch"
 import { useFieldArray, useFormContext } from "react-hook-form"
-import Button from "@material-ui/core/Button"
+import { FormInput } from "../../../shared/Form/FormInput/FormInput"
+import { FormKeyboardDatePicker } from "../../../shared/Form/FormKeyboardDatePicker/FormKeyboardDatePicker"
+import { FormSection } from "../../../shared/Form/FormSection/FormSection"
+import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle"
+import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
+import { FormSwitch } from "../../../shared/Form/FormSwitch/FormSwitch"
 import { TooltipDelete } from "../../../shared/Tooltips/TooltipDelete/TooltipDelete"
 
 export interface WorkExperiencesProps {
@@ -108,4 +107,4 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
   )
 }
 
-export const WorkExperiences = styled(WorkExperiencesInner)``
+export const WorkExperiences = WorkExperiencesInner

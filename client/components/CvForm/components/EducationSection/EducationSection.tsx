@@ -4,7 +4,6 @@ import FormLabel from "@material-ui/core/FormLabel"
 import Grid from "@material-ui/core/Grid"
 import React, { useEffect } from "react"
 import { useFieldArray, useFormContext } from "react-hook-form"
-import styled from "styled-components"
 import { FormInput } from "../../../shared/Form/FormInput/FormInput"
 import { FormKeyboardDatePicker } from "../../../shared/Form/FormKeyboardDatePicker/FormKeyboardDatePicker"
 import { FormSection } from "../../../shared/Form/FormSection/FormSection"
@@ -98,4 +97,4 @@ const EducationSectionInner = (props: EducationSectionProps) => {
   )
 }
 
-export const EducationSection = styled(EducationSectionInner)``
+export const EducationSection = EducationSectionInner

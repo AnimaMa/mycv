@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react"
-import styled from "styled-components"
-import { FormProvider, useForm } from "react-hook-form"
-import { BasicsSection } from "./components/BasicsSection/BasicsSection"
+import { CircularProgress } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
 import Grid from "@material-ui/core/Grid"
-import { WorkExperiences } from "./components/WorkExperiences/WorkExperiences"
-import { EducationSection } from "./components/EducationSection/EducationSection"
-import { SkillsSection } from "./components/SkillsSection/SkillsSection"
-import { LanguagesSection } from "./components/LanguagesSection/LanguagesSection"
-import { InterestsSection } from "./components/InterestsSection/InterestsSection"
-import { ReferencesSection } from "./components/ReferencesSection/ReferencesSection"
-import { CoursesSection } from "./components/CoursesSection/CoursesSection"
-import { useMutation, useQuery, QueryClient, useQueryClient } from "react-query"
-import { api } from "../../lib/api/api"
-import { nanoid } from "nanoid"
-import { useGeneratedUid } from "./hooks/useGeneratedUid"
 import { useRouter } from "next/router"
-import { CircularProgress } from "@material-ui/core"
+import React from "react"
+import { FormProvider, useForm } from "react-hook-form"
+import { useMutation } from "react-query"
+import { api } from "../../lib/api/api"
 import { generateResumeRoute } from "../../lib/routes"
+import { BasicsSection } from "./components/BasicsSection/BasicsSection"
+import { CoursesSection } from "./components/CoursesSection/CoursesSection"
+import { EducationSection } from "./components/EducationSection/EducationSection"
+import { InterestsSection } from "./components/InterestsSection/InterestsSection"
+import { LanguagesSection } from "./components/LanguagesSection/LanguagesSection"
+import { ReferencesSection } from "./components/ReferencesSection/ReferencesSection"
+import { SkillsSection } from "./components/SkillsSection/SkillsSection"
+import { WorkExperiences } from "./components/WorkExperiences/WorkExperiences"
+import { useGeneratedUid } from "./hooks/useGeneratedUid"
 
 export interface CvFormProps {
   className?: string
@@ -72,4 +70,4 @@ const CvFormInner = (props: CvFormProps) => {
   )
 }
 
-export const CvForm = styled(CvFormInner)``
+export const CvForm = CvFormInner

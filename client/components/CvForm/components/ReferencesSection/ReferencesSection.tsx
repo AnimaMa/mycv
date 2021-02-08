@@ -3,7 +3,6 @@ import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
 import React from "react"
 import { useFieldArray, useFormContext } from "react-hook-form"
-import styled from "styled-components"
 import { FormInput } from "../../../shared/Form/FormInput/FormInput"
 import { FormSection } from "../../../shared/Form/FormSection/FormSection"
 import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
@@ -67,4 +66,4 @@ const ReferencesSectionInner = (props: ReferencesSectionProps) => {
   )
 }
 
-export const ReferencesSection = styled(ReferencesSectionInner)``
+export const ReferencesSection = ReferencesSectionInner

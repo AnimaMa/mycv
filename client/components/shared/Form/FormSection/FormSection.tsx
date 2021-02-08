@@ -1,6 +1,5 @@
 import Card from "@material-ui/core/Card"
 import React, { ReactNode } from "react"
-import styled from "styled-components"
 
 export interface FormSectionProps {
   className?: string
@@ -15,10 +14,12 @@ const FormSectionInner = (props: FormSectionProps) => {
   )
 }
 
-export const FormSection = styled(FormSectionInner)`
-  margin: 25px 0;
+export const FormSection = FormSectionInner
 
-  .card {
-    padding: 25px 50px;
-  }
-`
+// export const FormSection = styled(FormSectionInner)`
+//   margin: 25px 0;
+
+//   .card {
+//     padding: 25px 50px;
+//   }
+// `
