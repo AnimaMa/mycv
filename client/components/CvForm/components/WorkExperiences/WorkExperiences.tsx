@@ -65,17 +65,17 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
           </Grid>
 
           <Grid item xs={4}>
-            <FormKeyboardDatePicker label="Začiatok" name={`workExperience[${index}].startDate`} defaultValue="" />
+            <FormKeyboardDatePicker label="Začiatok" name={`workExperience[${index}].startDate`} />
           </Grid>
 
           <Grid item xs={4}>
-            <FormKeyboardDatePicker label="Koniec" name={`workExperience[${index}].endDate`} defaultValue="" />
+            <FormKeyboardDatePicker label="Koniec" name={`workExperience[${index}].endDate`} />
           </Grid>
 
           <Grid item xs={2}>
             <FormControl>
               <FormLabel>Stále tu pracujem.</FormLabel>
-              <FormSwitch name={`workExperience[${index}].stillWorks`} defaultValue={false} />
+              <FormSwitch name={`workExperience[${index}].stillWorks`} />
             </FormControl>
           </Grid>
 

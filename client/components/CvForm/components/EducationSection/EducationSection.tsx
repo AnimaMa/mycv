@@ -55,17 +55,17 @@ const EducationSectionInner = (props: EducationSectionProps) => {
           </Grid>
 
           <Grid item xs={4}>
-            <FormKeyboardDatePicker label="Začiatok štúdia" name={`education[${index}].startDate`} defaultValue="" />
+            <FormKeyboardDatePicker label="Začiatok štúdia" name={`education[${index}].startDate`} />
           </Grid>
 
           <Grid item xs={4}>
-            <FormKeyboardDatePicker label="Koniec štúdia" name={`education[${index}].endDate`} defaultValue="" />
+            <FormKeyboardDatePicker label="Koniec štúdia" name={`education[${index}].endDate`} />
           </Grid>
 
           <Grid item xs={2}>
             <FormControl>
               <FormLabel>Stále tu študujem.</FormLabel>
-              <FormSwitch name={`education[${index}].stillStudy`} defaultValue={false} />
+              <FormSwitch name={`education[${index}].stillStudy`} />
             </FormControl>
           </Grid>
 
