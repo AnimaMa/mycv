@@ -38,7 +38,7 @@ export const ResumeContent = (props: ResumeContentProps) => {
         </div>
       </nav>
 
-      <div className="flex bg-white">
+      <div className="flex bg-white h-2/6">
         <Aside />
         <Content />
       </div>

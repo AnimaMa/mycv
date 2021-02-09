@@ -20,6 +20,7 @@ module.exports = {
       shadow2: "#9e9ec124",
       blueLight: "#95ceff69",
     }),
+
     extend: {},
   },
   variants: {

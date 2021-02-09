@@ -16,7 +16,7 @@ export interface SummaryProps {
 export const WorkExperiences = (props: SummaryProps) => {
   const { workExperience } = useResume()
   return (
-    <div className={props.className}>
+    <div className={`${props.className} my-2`}>
       <SectionHeading>Pracovné skúsenosti</SectionHeading>
       <div className=" ">
         <Timeline>

@@ -6,5 +6,5 @@ export interface SectionHeadingProps {
 }
 
 export const SectionHeading = (props: SectionHeadingProps) => {
-  return <h2 className="text-primary text-3xl text-bold ">{props.children}</h2>
+  return <h2 className="text-primary text-3xl text-bold mt-7 mb-5">{props.children}</h2>
 }
