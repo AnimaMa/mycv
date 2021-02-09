@@ -1,5 +1,5 @@
 import React from "react"
-import { useResume } from "../../ResumeProvider/ResumeProvider"
+import { useResume } from "../../../ResumeProvider/ResumeProvider"
 
 export interface NameDisplayProps {
   className?: string
@@ -7,7 +7,9 @@ export interface NameDisplayProps {
 
 const NameDisplayInner = (props: NameDisplayProps) => {
   const resume = useResume()
-  return <div className={props.className}>meno: {resume.basics.firstName}</div>
+  return (
+    <p className="my-3 font-bold text-2xl text-dark mx-auto">{`${resume.basics.firstName} ${resume.basics.lastName}`}</p>
+  )
 }
 
 export const NameDisplay = NameDisplayInner

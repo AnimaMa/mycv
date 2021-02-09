@@ -36,7 +36,12 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
                 <FormControl>
                   <FormLabel>Názov spoločnosti</FormLabel>
 
-                  <FormInput name={`workExperience[${index}].company`} placeholder="Rockford company" defaultValue="" />
+                  <FormInput
+                    required
+                    name={`workExperience[${index}].company`}
+                    placeholder="Rockford company"
+                    defaultValue=""
+                  />
                 </FormControl>
               </Grid>
 
@@ -44,6 +49,7 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
                 <FormControl>
                   <FormLabel>Tvoja pozícia</FormLabel>
                   <FormInput
+                    required
                     name={`workExperience[${index}].position`}
                     placeholder="Učiteľka metlobalu"
                     defaultValue=""
@@ -81,12 +87,12 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
 
               <Grid item sm={4} xs={12}>
                 <FormLabel>Od</FormLabel>
-                <FormKeyboardDatePicker label="Začiatok" name={`workExperience[${index}].startDate`} />
+                <FormKeyboardDatePicker required label="Začiatok" name={`workExperience[${index}].startDate`} />
               </Grid>
 
               <Grid item sm={4} xs={12}>
                 <FormLabel>Do</FormLabel>
-                <FormKeyboardDatePicker label="Koniec" name={`workExperience[${index}].endDate`} />
+                <FormKeyboardDatePicker required label="Koniec" name={`workExperience[${index}].endDate`} />
               </Grid>
 
               <Grid item sm={4} xs={12}>
@@ -104,6 +110,7 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
                 <FormControl>
                   <FormLabel>Napíš všetko čo uznáš za vhodné</FormLabel>
                   <FormInput
+                    required
                     name={`workExperience[${index}].summary`}
                     placeholder="Môžeš napísať krátky sumár o tom, čo si robil v tejto spoločnosti."
                     multiline

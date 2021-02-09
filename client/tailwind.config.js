@@ -8,12 +8,16 @@ module.exports = {
     textColor: {
       primary: "#003a8c",
       secondary: "#1896e0",
+      dark: "#5F6F81",
+      shadow: "#e0dddd2e",
+      shadow2: "#9e9ec124",
     },
     backgroundColor: (theme) => ({
       primary: "#003a8c",
       secondary: "#1896e0",
       white: "#ffffff",
       shadow: "#e0dddd2e",
+      shadow2: "#9e9ec124",
       blueLight: "#95ceff69",
     }),
     extend: {},

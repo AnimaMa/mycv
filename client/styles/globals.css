@@ -19,13 +19,12 @@ section {
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  transition: all 0.3s linear;
 }
 
 a {
   text-decoration: none;
 }
-
-
 
 h1,
 h2,
@@ -49,7 +48,8 @@ h3 {
 p {
   font-size: 16px;
   line-height: 17px;
-  font-weight: 600;
+  font-weight: 400;
+  color: #5F6F81;
 }
 
 .MuiFormControl-root {
@@ -78,7 +78,9 @@ input::placeholder {
   font-weight: 100 !important;
   color:#003a8c !important;
 }
-
+.MuiTimelineItem-missingOppositeContent:before {
+  display: none !important;
+}
 
   button:focus {
 outline: none;

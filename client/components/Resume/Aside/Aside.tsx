@@ -1,5 +1,5 @@
 import React from "react"
-import { BasicsSection } from "../BasicsSection/BasicsSection"
+import { BasicsSection } from "./BasicsSection/BasicsSection"
 
 export interface AsideProps {
   className?: string
@@ -7,8 +7,8 @@ export interface AsideProps {
 
 export const Aside = (props: AsideProps) => {
   return (
-    <div className={`${props.className} aside container mx-aut sm:w-1/4  bg-blueLight rounded-r-lg py-10   px-5`}>
-      <div className="flex">
+    <div className={`${props.className} aside container mx-aut sm:w-1/4  bg-shadow2 rounded-r-lg py-10   px-5`}>
+      <div className="flex items-center justify-center">
         <BasicsSection />
       </div>
     </div>
