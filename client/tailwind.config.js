@@ -12,6 +12,9 @@ module.exports = {
     backgroundColor: (theme) => ({
       primary: "#003a8c",
       secondary: "#1896e0",
+      white: "#ffffff",
+      shadow: "#e0dddd2e",
+      blueLight: "#95ceff69",
     }),
     extend: {},
   },

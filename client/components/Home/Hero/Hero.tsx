@@ -12,7 +12,7 @@ export const Hero = (props: HeroProps) => {
   return (
     <div className={`h-full ${styles.hero}`}>
       <div className={styles.bgWrap}>
-        <Image alt="Mountains" src="/img/bg.png" layout="fill" objectFit="cover" quality={100} />
+        <Image alt="Cloud Background" src="/img/bg.svg" layout="fill" objectFit="cover" priority quality={100} />
       </div>
 
       <div className="flex h-full items-center justify-center z-2 relative container mx-auto">
@@ -31,13 +31,14 @@ export const Hero = (props: HeroProps) => {
             </Button>
           </div>
         </div>
-        <div className=" flex flex-1 items-center justify-center">
+        <div className=" transition-all flex flex-1 items-center justify-center">
           <Image
             className="object-center h-auto "
             src="/img/logo.svg"
             alt="cloudresume logo"
             width={500}
             height={500}
+            priority
           />
         </div>
       </div>

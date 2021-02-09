@@ -4,6 +4,8 @@ import { ResumeProvider } from "../../components/Resume/ResumeProvider/ResumePro
 import { getAllResumeUids, getResume } from "../../lib/api/resume"
 import { Resumes } from "../../lib/models/resume"
 import { generateResumeRoute } from "../../lib/routes"
+import { ResumeContent } from "../../components/Resume/ResumeContent"
+import Layout from "../../components/shared/Layout/Layout"
 
 interface ResumePageProps {
   resume: Resumes.Resume
@@ -15,7 +17,11 @@ export const ResumePage = (props: ResumePageProps) => {
   return (
     <div>
       <ResumeProvider resume={resume}>
-        <div></div>
+        <Layout bgColor={true} className="layout_create-cv">
+          <div className="container mx-auto md:w-1/2 w-11/12">
+            <ResumeContent />
+          </div>
+        </Layout>
       </ResumeProvider>
     </div>
   )
