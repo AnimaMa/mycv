@@ -1,13 +1,13 @@
-import React from "react"
-import { SectionHeading } from "../../components/SectionHeading"
-import { useResume } from "../../ResumeProvider/ResumeProvider"
 import Timeline from "@material-ui/lab/Timeline"
-import TimelineItem from "@material-ui/lab/TimelineItem"
-import TimelineSeparator from "@material-ui/lab/TimelineSeparator"
-import TimelineDot from "@material-ui/lab/TimelineDot"
 import TimelineConnector from "@material-ui/lab/TimelineConnector"
 import TimelineContent from "@material-ui/lab/TimelineContent"
+import TimelineDot from "@material-ui/lab/TimelineDot"
+import TimelineItem from "@material-ui/lab/TimelineItem"
+import TimelineSeparator from "@material-ui/lab/TimelineSeparator"
+import React from "react"
 import { MdWork } from "react-icons/md"
+import { SectionHeading } from "../../components/SectionHeading"
+import { useResume } from "../../ResumeProvider/ResumeProvider"
 
 export interface SummaryProps {
   className?: string
@@ -17,7 +17,13 @@ export const WorkExperiences = (props: SummaryProps) => {
   const { workExperience } = useResume()
   return (
     <div className={`${props.className} my-2`}>
-      <SectionHeading>Pracovné skúsenosti</SectionHeading>
+      <SectionHeading
+        withIcon={true}
+        heading="Pracovné skúsenosti"
+        iconUrl="/img/icon_work.svg"
+        iconAlt="education icon"
+      />
+
       <div className=" ">
         <Timeline>
           {workExperience.map((work) => (

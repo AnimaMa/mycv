@@ -18,7 +18,7 @@ export const ResumePage = (props: ResumePageProps) => {
     <div>
       <ResumeProvider resume={resume}>
         <Layout bgColor={true} className="layout_create-cv">
-          <div className="container mx-auto md:w-8/12 w-12/12 max-h-screen mb-5">
+          <div className="container mx-auto md:w-8/12 w-12/12  mb-5">
             <ResumeContent />
           </div>
         </Layout>

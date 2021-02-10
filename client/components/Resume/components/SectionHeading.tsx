@@ -1,10 +1,23 @@
 import React, { ReactNode } from "react"
+import Image from "next/image"
 
 export interface SectionHeadingProps {
   className?: string
-  children: ReactNode
+  withIcon?: boolean
+  iconUrl?: string
+  iconAlt?: string
+  heading: string
 }
 
 export const SectionHeading = (props: SectionHeadingProps) => {
-  return <h2 className="text-primary text-3xl text-bold mt-7 mb-5">{props.children}</h2>
+  return (
+    <div className={` ${props.withIcon ? "flex items-center" : ""} mt-7 mb-5`}>
+      {props.withIcon && (
+        <span className="mr-2">
+          <Image src={props.iconUrl} alt={props.iconAlt} width={40} height={45} />
+        </span>
+      )}
+      <h2 className=" text-primary text-3xl text-bold ">{props.heading} </h2>
+    </div>
+  )
 }
