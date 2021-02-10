@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import Image from "next/image"
 import { useResume } from "../../../ResumeProvider/ResumeProvider"
 import { GoQuote } from "react-icons/go"
+import { SingleReference } from "./components/SingleReference"
 // import "./references.css"
 
 export interface ReferencesProps {
@@ -18,7 +19,7 @@ export const References = (props: ReferencesProps) => {
       <SectionHeading withIcon={true} heading="Referencie" iconUrl="/img/icon_rating.svg" iconAlt="rating icon" />
 
       <div>
-        <Carousel
+        {/* <Carousel
           autoPlay={true}
           showArrows={false}
           showThumbs={false}
@@ -27,22 +28,14 @@ export const References = (props: ReferencesProps) => {
           infiniteLoop={true}
         >
           {reference.map((reference) => (
-            <div className="bg-shadow  md:h-44 h-auto py-5 px-5 rounded" key={reference.id}>
-              <div className="flex justify-between">
-                <h3>
-                  {reference.name}{" "}
-                  <span className="text-xs">
-                    {reference.position}, {reference.company}
-                  </span>
-                </h3>
-                <GoQuote className="text-primary text-2xl" />
-              </div>
-              <div className="my-2">
-                <p className="text-left">{reference.reference}</p>
-              </div>
-            </div>
+            <SingleReference {...reference} />
           ))}
-        </Carousel>
+        </Carousel> */}
+      </div>
+      <div className="references space-y-8">
+        {reference.map((reference) => (
+          <SingleReference {...reference} />
+        ))}
       </div>
     </div>
   )

@@ -11,9 +11,9 @@ export interface SectionHeadingProps {
 
 export const SectionHeading = (props: SectionHeadingProps) => {
   return (
-    <div className={` ${props.withIcon ? "flex items-center" : ""} mt-7 mb-5`}>
+    <div className={` ${props.withIcon ? "flex items-center" : ""} mt-12 mb-5`}>
       {props.withIcon && (
-        <span className="mr-2">
+        <span className="mr-6">
           <Image src={props.iconUrl} alt={props.iconAlt} width={40} height={45} />
         </span>
       )}

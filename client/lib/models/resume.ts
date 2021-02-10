@@ -94,7 +94,7 @@ export declare module Resumes {
     name: string
     website: string
     place: string
-    certificate: boolean
+    certificate?: boolean
   }
 
   export interface Skill {

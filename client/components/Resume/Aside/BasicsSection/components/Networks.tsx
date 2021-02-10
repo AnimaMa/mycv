@@ -13,7 +13,7 @@ export const Networks = (props: ComponentNameProps) => {
   const iconClassNames = "text-2xl transition-all text-secondary hover:text-dark"
   return (
     <div className={props.className}>
-      <div className="flex justify-center">
+      <div className="flex justify-center space-x-3">
         {networks?.linkedin && (
           <a href={networks.linkedin}>
             <AiFillLinkedin className={iconClassNames} />
@@ -31,7 +31,7 @@ export const Networks = (props: ComponentNameProps) => {
         )}
       </div>
       {networks?.customWebsite && (
-        <div className="my-4">
+        <div className="my-4 flex justify-center">
           <a href="networks?.customWebsite" className="text-sm text-primary hover:text-secondary">
             {networks?.customWebsite}
           </a>

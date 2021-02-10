@@ -9,7 +9,7 @@ export const Address = () => {
     <div className="my-4">
       {basics.location && (
         <div className="my-4">
-          <div className="flex justify-start items-center ">
+          <div className="flex justify-start items-center space-x-2">
             <IoMdPin className="text-base mr-1" />
             <div>
               <p>{basics.location.address}</p>

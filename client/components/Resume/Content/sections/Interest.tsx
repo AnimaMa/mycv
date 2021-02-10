@@ -16,14 +16,15 @@ export const Interest = (props: InterestProps) => {
         iconUrl="/img/icon_interests.svg"
         iconAlt="interests icon"
       />
-
-      <div id="interest" className=" md:pl-12">
-        {interest &&
-          interest.map((interest) => (
-            <div className="flex mb-3  " key={interest.id}>
-              <p className="text-secondary  mr-2  ">{interest.name}</p>
-            </div>
-          ))}
+      <div id="interest" className=" md:pl-16">
+        <div className="flex mb-3  ">
+          {interest &&
+            interest.map((interest) => (
+              <p key={interest.id} className="text-secondary  mr-2  ">
+                {interest.name} <span className="text-dark">|</span>
+              </p>
+            ))}
+        </div>
       </div>
     </div>
   )
