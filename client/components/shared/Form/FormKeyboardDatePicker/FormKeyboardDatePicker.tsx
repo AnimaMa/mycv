@@ -8,11 +8,12 @@ export interface FormKeyboardDatePickerProps {
   className?: string
   label: string
   name: string
+  required?: boolean
 }
 
 const FormKeyboardDatePickerInner = (props: FormKeyboardDatePickerProps) => {
   const { control, errors } = useFormContext()
-  const { name, label } = props
+  const { name, label, required } = props
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -25,6 +26,7 @@ const FormKeyboardDatePickerInner = (props: FormKeyboardDatePickerProps) => {
             <KeyboardDatePicker
               onChange={props.onChange}
               value={props.value}
+              required={required}
               defaultValue={props.value}
               format="dd.MM.yyyy"
               cancelLabel="Zavrieť"

@@ -92,7 +92,7 @@ const WorkExperiencesInner = (props: WorkExperiencesProps) => {
 
               <Grid item sm={4} xs={12}>
                 <FormLabel>Do</FormLabel>
-                <FormKeyboardDatePicker required label="Koniec" name={`workExperience[${index}].endDate`} />
+                <FormKeyboardDatePicker label="Koniec" name={`workExperience[${index}].endDate`} />
               </Grid>
 
               <Grid item sm={4} xs={12}>
