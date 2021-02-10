@@ -19,8 +19,6 @@ export const ResumePage = (props: ResumePageProps) => {
       <ResumeProvider resume={resume}>
         <Layout bgColor={true} className="layout_create-cv">
           <div className="container mx-auto lg:5/12 md:w-10/12  w-11/12  mb-5">
-            {/* <div className="container mx-auto md:w-8/12 w-12/12 sm:w-full  mb-5"> */}
-
             <ResumeContent />
           </div>
         </Layout>
@@ -43,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: allResumeUids?.map((resumeUid) => generateResumeRoute(resumeUid)) || [],
-    fallback: false,
+    fallback: "blocking",
   }
 }
 
