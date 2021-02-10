@@ -31,7 +31,7 @@ export const ResumeContent = (props: ResumeContentProps) => {
             <a href="#" className="text-primary  hover:text-secondary font-bold mr-4 uppercase">
               ffff
             </a>
-            <a href="#" className="text-primary  hover:text-secondary font-bold mr-4 uppercase">
+            <a href="#interest" className="text-primary  hover:text-secondary font-bold mr-4 uppercase">
               xxxx
             </a>
           </div>

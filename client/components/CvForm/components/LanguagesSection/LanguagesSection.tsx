@@ -30,7 +30,7 @@ const LanguagesSectionInner = (props: LanguagesSectionProps) => {
             <Grid item sm={6} xs={8}>
               <FormControl>
                 <FormLabel>Cudzí jazyk</FormLabel>
-                <FormInput name={`language[${index}].name`} placeholder="Anglický jazyk" defaultValue="" />
+                <FormInput name={`language[${index}].language`} placeholder="Anglický jazyk" defaultValue="" />
               </FormControl>
             </Grid>
 

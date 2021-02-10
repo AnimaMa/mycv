@@ -1,9 +1,12 @@
 import React from "react"
+import { Courses } from "./sections/Courses"
 import { Education } from "./sections/Education"
+import { Interest } from "./sections/Interest"
+import { Languages } from "./sections/Languages"
+import { References } from "./sections/References/References"
+import { Skills } from "./sections/Skills"
 import { Summary } from "./sections/Summary"
 import { WorkExperiences } from "./sections/WorkExperiences"
-import styles from "./content.module.css"
-import { References } from "./sections/References/References"
 
 export interface ContentProps {
   className?: string
@@ -18,6 +21,10 @@ export const Content = (props: ContentProps) => {
         <WorkExperiences />
         <Education />
         <References />
+        <Courses />
+        <Languages />
+        <Skills />
+        <Interest />
       </div>
     </div>
   )

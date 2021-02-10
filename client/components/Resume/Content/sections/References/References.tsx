@@ -15,7 +15,7 @@ export const References = (props: ReferencesProps) => {
   const { reference } = useResume()
   return (
     <div className={props.className}>
-      <SectionHeading heading="Referencie" />
+      <SectionHeading withIcon={true} heading="Referencie" iconUrl="/img/icon_rating.svg" iconAlt="rating icon" />
 
       <div>
         <Carousel
