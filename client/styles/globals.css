@@ -85,3 +85,12 @@ input::placeholder {
   button:focus {
 outline: none;
   }
+
+  .carousel .slide {
+    background-color: transparent !important;
+    border-radius: 16px;
+    border-top-right-radius: 0;
+  }
+.control-dots .dot.selected {
+  background-color: teal;
+}
