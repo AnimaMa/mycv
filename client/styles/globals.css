@@ -91,6 +91,8 @@ outline: none;
     border-radius: 16px;
     border-top-right-radius: 0;
   }
-.control-dots .dot.selected {
-  background-color: teal;
+
+.carousel .control-dots .dot.selected:focus {
+  background-color:  #003a8c;
+  outline: none;
 }

@@ -18,9 +18,16 @@ export const References = (props: ReferencesProps) => {
       <SectionHeading heading="Referencie" />
 
       <div>
-        <Carousel autoPlay showArrows={false} showThumbs={false} dynamicHeight={false} transitionTime={100}>
+        <Carousel
+          autoPlay={true}
+          showArrows={false}
+          showThumbs={false}
+          dynamicHeight={true}
+          showStatus={false}
+          infiniteLoop={true}
+        >
           {reference.map((reff) => (
-            <div className="bg-shadow h-89 py-5 px-5" key={reff.id}>
+            <div className="bg-shadow  h-44 py-5 px-5" key={reff.id}>
               <div className="flex justify-between">
                 <h3>
                   {reff.name}{" "}
