@@ -26,19 +26,19 @@ export const References = (props: ReferencesProps) => {
           showStatus={false}
           infiniteLoop={true}
         >
-          {reference.map((reff) => (
-            <div className="bg-shadow  h-44 py-5 px-5" key={reff.id}>
+          {reference.map((reference) => (
+            <div className="bg-shadow  md:h-44 h-auto py-5 px-5 rounded" key={reference.id}>
               <div className="flex justify-between">
                 <h3>
-                  {reff.name}{" "}
+                  {reference.name}{" "}
                   <span className="text-xs">
-                    {reff.position}, {reff.company}
+                    {reference.position}, {reference.company}
                   </span>
                 </h3>
                 <GoQuote className="text-primary text-2xl" />
               </div>
               <div className="my-2">
-                <p className="text-left">{reff.reference}</p>
+                <p className="text-left">{reference.reference}</p>
               </div>
             </div>
           ))}

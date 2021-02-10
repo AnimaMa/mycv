@@ -14,7 +14,7 @@ export interface ContentProps {
 
 export const Content = (props: ContentProps) => {
   return (
-    <div className="conatiner mx-auto sm:w-3/4 p-10 s ">
+    <div className="container mx-auto  p-10 sm:w-3/5">
       {/* <div className={`overflow-y-scroll ${styles.innerWrap}`}> */}
       <div>
         <Summary />

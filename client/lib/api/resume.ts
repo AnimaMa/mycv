@@ -55,6 +55,7 @@ export const getResume = async (where: any = {}): Promise<Resumes.Resume> => {
           stillWorks
         }
         education {
+          id
           institution
           area
           degree
@@ -64,27 +65,32 @@ export const getResume = async (where: any = {}): Promise<Resumes.Resume> => {
           stillStudy
         }
         course {
+          id
           name
           website
           place
           certificate
         }
         skill {
+          id
           name
           level
           technologies
         }
         reference {
+          id
           name
           company
           position
           reference
         }
         language {
+          id
           language
           fluency
         }
         interest {
+          id
           name
         }
         uid

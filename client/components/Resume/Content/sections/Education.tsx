@@ -15,13 +15,14 @@ export interface SummaryProps {
 
 export const Education = (props: SummaryProps) => {
   const { education } = useResume()
+
   return (
     <div className={`${props.className} my-4`}>
       <SectionHeading withIcon={true} heading="Vzdelanie" iconUrl="/img/icon_edu.svg" iconAlt="education icon" />
       <div className=" ">
         <Timeline>
-          {education.map((school) => (
-            <TimelineItem key={school.id}>
+          {education.map((school, index) => (
+            <TimelineItem key={index}>
               <TimelineSeparator>
                 <TimelineDot color="primary">
                   <MdSchool />
@@ -34,7 +35,7 @@ export const Education = (props: SummaryProps) => {
                   <span className="text-dark text-sm">
                     {school.startDate} - {school.stillStudy ? "Present" : school.endDate}
                   </span>
-                  <p>{school.degree}</p>
+                  <p>Titul: {school.degree}</p>
                   <p className="text-secondary text-bold uppercase font-bold my-2">{school.area}</p>
                   {school.activitiesAndSocietiess && <p>{school.activitiesAndSocietiess}</p>}
                 </div>

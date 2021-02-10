@@ -12,10 +12,10 @@ export const Courses = (props: CoursesProps) => {
     <div className={props.className}>
       <SectionHeading withIcon={true} heading="Kurzy" iconUrl="/img/icon_certificate.svg" iconAlt="certificate icon" />
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap md:pl-12">
         {course &&
           course.map((c) => (
-            <div className="mr-2">
+            <div className="mr-2" key={c.id}>
               <p className="text-secondary font-bold uppercase my-2">{c.name}</p>
               {c.place ? (
                 <div className="  mb-1">

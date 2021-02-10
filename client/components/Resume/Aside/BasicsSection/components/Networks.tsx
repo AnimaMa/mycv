@@ -7,9 +7,9 @@ export interface ComponentNameProps {
 }
 
 export const Networks = (props: ComponentNameProps) => {
-  const resume = useResume()
+  const { basics } = useResume()
 
-  const networks = resume.basics.networks
+  const networks = basics.networks
   const iconClassNames = "text-2xl transition-all text-secondary hover:text-dark"
   return (
     <div className={props.className}>

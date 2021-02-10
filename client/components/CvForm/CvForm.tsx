@@ -26,7 +26,7 @@ const CvFormInner = (props: CvFormProps) => {
   const router = useRouter()
 
   const rhfMethods = useForm()
-  const { register, handleSubmit, watch } = rhfMethods
+  const { handleSubmit } = rhfMethods
 
   const { mutate, isLoading } = useMutation(
     (values: any) => api({ url: `/resumes`, data: { ...values, uid: uid }, method: "POST" }),
@@ -60,7 +60,7 @@ const CvFormInner = (props: CvFormProps) => {
                   Vytvaram CV
                 </div>
               ) : (
-                <div>Vytvorit</div>
+                <div>Vytvoriť</div>
               )}
             </Button>
           </Grid>

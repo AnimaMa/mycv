@@ -17,13 +17,15 @@ export const Languages = (props: LanguagesProps) => {
         iconUrl="/img/icon_languages.svg"
         iconAlt="certificate icon"
       />
-      {language &&
-        language.map((l) => (
-          <div className="flex mb-3">
-            <p className="text-secondary font-bold mr-2  ">{l.language}</p>
-            <p className="text-primary uppercase">{l.fluency}</p>
-          </div>
-        ))}
+      <div className="md:pl-12">
+        {language &&
+          language.map((l) => (
+            <div className="flex mb-3" key={l.id}>
+              <p className="text-secondary font-bold mr-2  ">{l.language}</p>
+              <p className="text-primary uppercase">{l.fluency}</p>
+            </div>
+          ))}
+      </div>
     </div>
   )
 }

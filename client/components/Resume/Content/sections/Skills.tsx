@@ -16,10 +16,10 @@ export const Skills = (props: SkillsProps) => {
         iconUrl="/img/icon_skill.svg"
         iconAlt="skill icon"
       />
-      <div>
+      <div className="md:pl-12">
         {skill &&
           skill.map((s) => (
-            <div className="flex mb-3 flex-col">
+            <div className="flex mb-3 flex-col" key={s.id}>
               <p className="text-secondary font-bold mr-2  ">{s.name}</p>
               <p className="text-primary mr-2 ">
                 {" "}

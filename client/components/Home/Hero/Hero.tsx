@@ -26,7 +26,7 @@ export const Hero = (props: HeroProps) => {
           <div className="my-5">
             <Button color="primary" variant="contained">
               <Link href="/create-resume">
-                <a className="">Vytvoriť</a>
+                <a>Vytvoriť</a>
               </Link>
             </Button>
           </div>

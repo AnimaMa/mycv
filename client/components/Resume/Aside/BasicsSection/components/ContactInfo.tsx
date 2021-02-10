@@ -7,22 +7,22 @@ export interface ContactInfoProps {
 }
 
 export const ContactInfo = (props: ContactInfoProps) => {
-  const resume = useResume()
+  const { basics } = useResume()
 
   return (
     <div className="my-4">
-      {resume.basics.email && (
+      {basics.email && (
         <div className="my-4">
           <div className="flex justify-start items-center">
             <HiOutlineMail className="text-base mr-1" />
-            <a href={`mailto:${resume.basics.email}`} className=" text-primary hover:text-secondary">
-              {resume.basics.email}
+            <a href={`mailto:${basics.email}`} className=" text-primary hover:text-secondary">
+              {basics.email}
             </a>
           </div>
           <div className="flex justify-start items-center">
             <HiOutlinePhone className="text-base mr-1" />
-            <a href={`tel:${resume.basics.phone}`} className=" text-primary hover:text-secondary">
-              {resume.basics.phone}
+            <a href={`tel:${basics.phone}`} className=" text-primary hover:text-secondary">
+              {basics.phone}
             </a>
           </div>
         </div>

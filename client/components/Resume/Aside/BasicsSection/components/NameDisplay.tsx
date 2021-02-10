@@ -6,10 +6,8 @@ export interface NameDisplayProps {
 }
 
 const NameDisplayInner = (props: NameDisplayProps) => {
-  const resume = useResume()
-  return (
-    <p className="my-3 font-bold text-2xl text-dark mx-auto">{`${resume.basics.firstName} ${resume.basics.lastName}`}</p>
-  )
+  const { basics } = useResume()
+  return <p className="my-3 font-bold text-2xl text-dark mx-auto">{`${basics.firstName} ${basics.lastName}`}</p>
 }
 
 export const NameDisplay = NameDisplayInner

@@ -17,10 +17,10 @@ export const Interest = (props: InterestProps) => {
         iconAlt="interests icon"
       />
 
-      <div id="interest">
+      <div id="interest" className=" md:pl-12">
         {interest &&
           interest.map((interest) => (
-            <div className="flex mb-3  ">
+            <div className="flex mb-3  " key={interest.id}>
               <p className="text-secondary  mr-2  ">{interest.name}</p>
             </div>
           ))}
