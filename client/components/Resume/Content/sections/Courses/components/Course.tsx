@@ -2,6 +2,7 @@ import React from "react"
 import { IoMdGlobe } from "react-icons/io"
 import { MdPlace } from "react-icons/md"
 import { Resumes } from "../../../../../../lib/models/resume"
+import { getHostNamefromUrl } from "../../../../../utils/getHostNamefromUrl"
 
 export interface CourseProps extends Resumes.Course {
   className?: string
@@ -9,25 +10,26 @@ export interface CourseProps extends Resumes.Course {
 
 export const Course = (props: CourseProps) => {
   const { id, name, place, website } = props
+
   return (
-    <div className="flex justify-between flex-col mr-5 " key={id}>
-      <p className="text-secondary font-bold uppercase my-2">{name}</p>
+    <div className=" mr-8 " key={id}>
+      <p className="text-secondary uppercase mb-4">{name}</p>
 
       {place && (
-        <div className="my-3">
-          <p className="pl-2 flex pr-3">
-            <MdPlace className="text-primary" />
-            <span className="ml-3">{place}</span>
+        <div className="flex flex-col items-start justify-center mb-2">
+          <p className=" flex">
+            <MdPlace className="text-primary mr-4" />
+            <span className="">{place}</span>
           </p>
         </div>
       )}
 
       {website && (
-        <div className="my-3">
-          <p className="pl-2 flex">
-            <IoMdGlobe className="text-primary" />
-            <a href={website} className="hover:text-opacity-50 ml-3">
-              {website}
+        <div className="flex flex-col items-start justify-center mb-2">
+          <p className="flex">
+            <IoMdGlobe className="text-primary mr-4" />
+            <a href={website} className="text-sm hover:text-opacity-50 ">
+              {getHostNamefromUrl(website)}
             </a>
           </p>
         </div>

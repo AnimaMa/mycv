@@ -11,7 +11,7 @@ export const Summary = (props: SummaryProps) => {
   return (
     <div className={props.className}>
       <SectionHeading heading="O mne" />
-      <p className="text-dark text-base leading-normal ">{resume.basics.summary}</p>
+      <p className="text-dark text-base leading-normal font-thin ">{resume.basics.summary}</p>
     </div>
   )
 }

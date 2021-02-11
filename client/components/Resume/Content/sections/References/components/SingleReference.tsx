@@ -20,7 +20,7 @@ export const SingleReference = (props: SingleReferenceProps) => {
         <GoQuote className="text-primary text-2xl" />
       </div>
       <div className="my-2">
-        <p className="text-left">{reference}</p>
+        <p className="text-left font-thin leading-6">{reference}</p>
       </div>
     </div>
   )

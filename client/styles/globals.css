@@ -20,6 +20,7 @@ section {
   margin: 0;
   font-family: "Roboto", sans-serif;
   transition: all 0.3s linear;
+  font-weight: 300;
 }
 
 a {
@@ -35,14 +36,24 @@ h4 {
 
 h1 {
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 100;
   line-height: 75px;
  
 
 }
 
+h2 {
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
 h3 {
   font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 p {
@@ -50,6 +61,8 @@ p {
   line-height: 17px;
   font-weight: 400;
   color: #5F6F81;
+  font-family: "Roboto", sans-serif;
+
 }
 
 .MuiFormControl-root {

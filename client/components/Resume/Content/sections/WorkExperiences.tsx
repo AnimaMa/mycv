@@ -6,7 +6,10 @@ import TimelineItem from "@material-ui/lab/TimelineItem"
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator"
 import React from "react"
 import { MdWork } from "react-icons/md"
+import { getHostNamefromUrl } from "../../../utils/getHostNamefromUrl"
+import { Duration } from "../../components/Duration"
 import { SectionHeading } from "../../components/SectionHeading"
+import { SectionSubContent } from "../../components/SectionSubContent"
 import { useResume } from "../../ResumeProvider/ResumeProvider"
 
 export interface SummaryProps {
@@ -24,45 +27,43 @@ export const WorkExperiences = (props: SummaryProps) => {
         iconAlt="education icon"
       />
 
-      <div className=" ">
-        <Timeline>
-          {workExperience.map((work) => (
-            <TimelineItem key={work.company}>
-              <TimelineSeparator>
-                <TimelineDot color="primary">
-                  <MdWork />
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <div className="pb-2">
-                  <h3>{work.company}</h3>
-                  <span className="text-dark text-sm">
-                    {work.startDate} - {work.stillWorks ? "Present" : work.endDate}
-                  </span>
-                  <p className="text-secondary text-bold uppercase font-bold my-2">{work.position}</p>
-                  {work.summary && <p>{work.summary}</p>}
-                  {work.usedTechnologies && (
-                    <div className="flex my-2 flex-col">
-                      <p className="pb-1  text-secondary">Technologie s ktorymi si pracoval:</p>
-                      <p className="pl-2">{work.usedTechnologies}</p>
-                    </div>
-                  )}
+      <Timeline>
+        {workExperience.map((work) => (
+          <TimelineItem key={work.company}>
+            <TimelineSeparator>
+              <TimelineDot color="primary">
+                <MdWork />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <div className="pb-2">
+                <h3>{work.company}</h3>
 
-                  {work.website && (
-                    <p>
-                      <span className="text-secondary">Webová stránka spoločnosti: </span>
-                      <a href={work.website} className=" hover:text-opacity-25">
-                        {work.website}
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </div>
+                <Duration startDate={work.startDate} endDate={work.endDate} stillLasts={work.stillWorks} />
+
+                <SectionSubContent title={work.position} text={work.summary}></SectionSubContent>
+
+                {work.usedTechnologies && (
+                  <div className="flex my-2 flex-row">
+                    <p className="pb-1 font-thin text-secondary">Technologie s ktorymi si pracoval:</p>
+                    <p className="pl-2 font-thin">{work.usedTechnologies}</p>
+                  </div>
+                )}
+
+                {work.website && (
+                  <div className="flex my-2 flex-row ">
+                    <p className="font-thin text-secondary">Webová stránka spoločnosti: </p>
+                    <a href={work.website} className=" pl-2 hover:text-opacity-25 text-dark">
+                      {getHostNamefromUrl(work.website)}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </div>
   )
 }

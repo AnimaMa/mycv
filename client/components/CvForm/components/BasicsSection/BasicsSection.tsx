@@ -101,6 +101,8 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
           <FormControl>
             <FormLabel>Tvoj web</FormLabel>
             <FormInput
+              type="url"
+              pattern="https://.*"
               name="basics.networks.customWebsite"
               defaultValue=""
               placeholder="https://www.tvojeportfolio.com/"

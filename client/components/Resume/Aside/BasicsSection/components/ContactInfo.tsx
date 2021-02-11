@@ -2,11 +2,7 @@ import React from "react"
 import { useResume } from "../../../ResumeProvider/ResumeProvider"
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi"
 
-export interface ContactInfoProps {
-  className?: string
-}
-
-export const ContactInfo = (props: ContactInfoProps) => {
+export const ContactInfo = () => {
   const { basics } = useResume()
 
   return (

@@ -30,7 +30,7 @@ const SkillsSectionInner = (props: SkillsSectionProps) => {
       <FormSectionTitle>Zručnosti / Silné stránky</FormSectionTitle>
       {fields.map((field, index) => (
         <Box my={6} key={field.id}>
-          <Grid  container>
+          <Grid container>
             <Grid container spacing={2} xs={10}>
               <Grid item sm={6} xs={12}>
                 <FormControl>

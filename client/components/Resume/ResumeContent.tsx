@@ -4,13 +4,8 @@ import { Content } from "./Content/Content"
 import Image from "next/image"
 import { useResume } from "./ResumeProvider/ResumeProvider"
 
-export interface ResumeContentProps {
-  className?: string
-}
-
-export const ResumeContent = (props: ResumeContentProps) => {
+export const ResumeContent = () => {
   const { workExperience, education, language, interest, skill, course } = useResume()
-  const linkStyles = ""
   return (
     <div className="wrapper">
       <nav className="flex items-center justify-end">

@@ -34,7 +34,7 @@ const EducationSectionInner = (props: EducationSectionProps) => {
 
       {fields.map((education, index) => (
         <Box my={6} key={education.id}>
-          <Grid container >
+          <Grid container>
             <Grid container xs={10} spacing={2}>
               <Grid item xs={12}>
                 <FormControl>

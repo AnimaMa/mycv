@@ -11,6 +11,7 @@ module.exports = {
       dark: "#5F6F81",
       shadow: "#e0dddd2e",
       shadow2: "#a9a9b524",
+      black: "#2b2626",
     },
     backgroundColor: (theme) => ({
       primary: "#003a8c",

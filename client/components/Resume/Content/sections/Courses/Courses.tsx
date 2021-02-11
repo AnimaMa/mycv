@@ -1,5 +1,6 @@
 import React from "react"
 import { SectionHeading } from "../../../components/SectionHeading"
+import { SectionWrap } from "../../../components/SectionWrap"
 import { useResume } from "../../../ResumeProvider/ResumeProvider"
 import { Course } from "./components/Course"
 
@@ -13,11 +14,11 @@ export const Courses = (props: CoursesProps) => {
     <div className={props.className}>
       <SectionHeading withIcon={true} heading="Kurzy" iconUrl="/img/icon_certificate.svg" iconAlt="certificate icon" />
 
-      <div className="flex flex-wrap md:pl-14 ">
-        {course?.map((course) => (
-          <Course {...course} />
+      <SectionWrap className="flex flex-wrap">
+        {course?.map((course, index) => (
+          <Course {...course} key={index} />
         ))}
-      </div>
+      </SectionWrap>
     </div>
   )
 }

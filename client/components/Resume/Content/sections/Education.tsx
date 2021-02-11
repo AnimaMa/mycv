@@ -6,7 +6,9 @@ import TimelineItem from "@material-ui/lab/TimelineItem"
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator"
 import React from "react"
 import { MdSchool } from "react-icons/md"
+import { Duration } from "../../components/Duration"
 import { SectionHeading } from "../../components/SectionHeading"
+import { SectionSubContent } from "../../components/SectionSubContent"
 import { useResume } from "../../ResumeProvider/ResumeProvider"
 
 export interface SummaryProps {
@@ -32,12 +34,10 @@ export const Education = (props: SummaryProps) => {
               <TimelineContent>
                 <div className="pb-2">
                   <h3>{school.institution}</h3>
-                  <span className="text-dark text-sm">
-                    {school.startDate} - {school.stillStudy ? "Present" : school.endDate}
-                  </span>
-                  <p>Titul: {school.degree}</p>
-                  <p className="text-secondary text-bold uppercase font-bold my-2">{school.area}</p>
-                  {school.activitiesAndSocietiess && <p>{school.activitiesAndSocietiess}</p>}
+                  <Duration startDate={school.startDate} endDate={school.endDate} stillLasts={school.stillStudy} />
+                  <p>{school.degree}</p>
+
+                  <SectionSubContent title={school.area} text={school.activitiesAndSocietiess}></SectionSubContent>
                 </div>
               </TimelineContent>
             </TimelineItem>

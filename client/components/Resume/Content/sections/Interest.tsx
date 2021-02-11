@@ -1,5 +1,6 @@
 import React from "react"
 import { SectionHeading } from "../../components/SectionHeading"
+import { SectionWrap } from "../../components/SectionWrap"
 import { useResume } from "../../ResumeProvider/ResumeProvider"
 
 export interface InterestProps {
@@ -16,15 +17,15 @@ export const Interest = (props: InterestProps) => {
         iconUrl="/img/icon_interests.svg"
         iconAlt="interests icon"
       />
-      <div id="interest" className=" md:pl-16">
-        <div className="flex mb-3  ">
+      <div id="interest">
+        <SectionWrap className="flex flex-row">
           {interest &&
             interest.map((interest) => (
               <p key={interest.id} className="text-secondary  mr-2  ">
                 {interest.name} <span className="text-dark">|</span>
               </p>
             ))}
-        </div>
+        </SectionWrap>
       </div>
     </div>
   )

@@ -1,16 +1,16 @@
 export interface RouteLink {
   label: string
-  href: string
+  to: string
   activeClassName?: string
 }
 
 export const routes: RouteLink[] = [
   {
-    href: "/",
+    to: "/",
     label: "Home",
   },
   {
-    href: "/create-resume",
+    to: "/create-resume",
     label: "Create resume",
   },
 ]

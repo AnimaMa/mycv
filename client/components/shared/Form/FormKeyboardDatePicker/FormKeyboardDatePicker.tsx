@@ -12,7 +12,7 @@ export interface FormKeyboardDatePickerProps {
 }
 
 const FormKeyboardDatePickerInner = (props: FormKeyboardDatePickerProps) => {
-  const { control, errors } = useFormContext()
+  const { control } = useFormContext()
   const { name, label, required } = props
 
   return (

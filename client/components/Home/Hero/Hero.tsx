@@ -4,11 +4,7 @@ import styles from "./hero.module.css"
 import { Button } from "@material-ui/core"
 import Link from "next/link"
 
-export interface HeroProps {
-  className?: string
-}
-
-export const Hero = (props: HeroProps) => {
+export const Hero = () => {
   return (
     <div className={`h-full ${styles.hero}`}>
       <div className={styles.bgWrap}>

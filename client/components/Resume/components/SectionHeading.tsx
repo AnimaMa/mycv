@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import Image from "next/image"
 
 export interface SectionHeadingProps {
@@ -11,13 +11,13 @@ export interface SectionHeadingProps {
 
 export const SectionHeading = (props: SectionHeadingProps) => {
   return (
-    <div className={` ${props.withIcon ? "flex items-center" : ""} mt-12 mb-5`}>
+    <div className={` ${props.withIcon ? "flex items-center" : ""} mt-16 mb-4`}>
       {props.withIcon && (
-        <span className="mr-6">
+        <span className="mr-5">
           <Image src={props.iconUrl} alt={props.iconAlt} width={40} height={45} />
         </span>
       )}
-      <h2 className=" text-primary text-3xl text-bold ">{props.heading} </h2>
+      <h2 className=" text-primary md:text-3xl text-xl text-bold ">{props.heading} </h2>
     </div>
   )
 }
