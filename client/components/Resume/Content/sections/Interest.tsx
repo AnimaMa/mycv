@@ -1,16 +1,16 @@
-import React from "react"
-import { SectionHeading } from "../../components/SectionHeading"
-import { SectionWrap } from "../../components/SectionWrap"
-import { useResume } from "../../ResumeProvider/ResumeProvider"
+import React from "react";
+import { SectionHeading } from "../../components/SectionHeading";
+import { SectionWrap } from "../../components/SectionWrap";
+import { useResume } from "../../ResumeProvider/ResumeProvider";
 
 export interface InterestProps {
-  className?: string
+  className?: string;
 }
 
 export const Interest = (props: InterestProps) => {
-  const { interest } = useResume()
+  const { interest } = useResume();
   return (
-    <div className={props.className}>
+    <div className={props.className} id="interests">
       <SectionHeading
         withIcon={true}
         heading="Záujmy / Záľuby"
@@ -21,12 +21,12 @@ export const Interest = (props: InterestProps) => {
         <SectionWrap className="flex flex-row">
           {interest &&
             interest.map((interest) => (
-              <p key={interest.id} className="text-secondary  mr-2  ">
+              <p key={interest.id} className="text-secondary font-thin  mr-2  ">
                 {interest.name} <span className="text-dark">|</span>
               </p>
             ))}
         </SectionWrap>
       </div>
     </div>
-  )
-}
+  );
+};

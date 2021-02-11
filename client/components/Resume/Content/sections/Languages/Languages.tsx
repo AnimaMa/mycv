@@ -12,7 +12,7 @@ export const Languages = (props: LanguagesProps) => {
   const { language } = useResume()
 
   return (
-    <div className={props.className}>
+    <div className={props.className} id="languages">
       <SectionHeading
         withIcon={true}
         heading="Cudzie jazyky"

@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
-import { routes } from "./routes"
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { routes } from "./routes";
 
 const HeaderInner = () => {
   return (
@@ -9,13 +9,15 @@ const HeaderInner = () => {
       <div className="container mx-auto">
         <nav className="navigation flex justify-between items-center">
           <Link href="/">
-            <Image src="/img/logo.svg" alt="cloudresume logo" width={90} height={75} />
+            <a>
+              <Image src="/img/logo.svg" alt="cloudresume logo" width={90} height={75} />
+            </a>
           </Link>
 
           <div className="space-x-5">
             {routes.map((route) => (
               <Link href={route.to} key={route.label}>
-                <a className="  text-primary  hover:text-secondary transition duration-300 font-bold text-lg  ">
+                <a className="  text-primary  hover:text-secondary transition duration-300 font-normal text-lg  ">
                   {route.label}
                 </a>
               </Link>
@@ -24,7 +26,7 @@ const HeaderInner = () => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export const Header = HeaderInner
+export const Header = HeaderInner;

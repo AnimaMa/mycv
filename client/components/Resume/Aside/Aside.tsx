@@ -1,18 +1,16 @@
-import React from "react"
-import { BasicsSection } from "./BasicsSection/BasicsSection"
+import React from "react";
+import { BasicsSection } from "./BasicsSection/BasicsSection";
 
 export interface AsideProps {
-  className?: string
+  className?: string;
 }
 
 export const Aside = (props: AsideProps) => {
   return (
-    <div className={`${props.className} aside container bg-shadow2 rounded-r-lg py-10  px-5  sm:w-3/12`}>
+    <div className={`${props.className} aside container bg-shadow2 rounded-r-lg p-10  sm:w-3/12`}>
       <div className=" h-auto sticky top-14">
-        <div className="flex  items-center justify-center">
-          <BasicsSection />
-        </div>
+        <BasicsSection className="flex   justify-center flex-col" />
       </div>
     </div>
-  )
-}
+  );
+};

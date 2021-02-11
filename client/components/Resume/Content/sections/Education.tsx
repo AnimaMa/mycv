@@ -19,7 +19,7 @@ export const Education = (props: SummaryProps) => {
   const { education } = useResume()
 
   return (
-    <div className={`${props.className} my-4`}>
+    <div className={`${props.className} my-4`} id="education">
       <SectionHeading withIcon={true} heading="Vzdelanie" iconUrl="/img/icon_edu.svg" iconAlt="education icon" />
       <div className=" ">
         <Timeline>

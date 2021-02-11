@@ -10,7 +10,7 @@ export interface ReferencesProps {
 export const References = (props: ReferencesProps) => {
   const { reference } = useResume()
   return (
-    <div className={props.className}>
+    <div className={props.className} id="references">
       <SectionHeading withIcon={true} heading="Referencie" iconUrl="/img/icon_rating.svg" iconAlt="rating icon" />
       <div className="references space-y-8">
         {reference.map((reference, index) => (

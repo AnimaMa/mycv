@@ -1,16 +1,21 @@
-import { FormLabel, Grid } from "@material-ui/core"
-import FormControl from "@material-ui/core/FormControl"
-import React from "react"
-import { FormInput } from "../../../shared/Form/FormInput/FormInput"
-import { FormSection } from "../../../shared/Form/FormSection/FormSection"
-import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle"
-import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
+import { FormLabel, Grid } from "@material-ui/core";
+import FormControl from "@material-ui/core/FormControl";
+import React from "react";
+import { useFormContext } from "react-hook-form";
+import { FormInput } from "../../../shared/Form/FormInput/FormInput";
+import { FormSection } from "../../../shared/Form/FormSection/FormSection";
+import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle";
+import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle";
+import { ErrorMessage } from "@hookform/error-message";
+import dot from "dot-object";
 
 export interface BasicsSectionProps {
-  className?: string
+  className?: string;
 }
 
 const BasicsSectionInner = (props: BasicsSectionProps) => {
+  const { control, register, errors } = useFormContext();
+
   return (
     <FormSection className={props.className}>
       <FormSectionTitle>Základné informácie </FormSectionTitle>
@@ -18,21 +23,42 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         <Grid item sm={2} xs={6} className="my-2">
           <FormControl>
             <FormLabel>Titul</FormLabel>
-            <FormInput name="basics.titleBefore" placeholder="Bc" defaultValue="" />
+            <FormInput name="basics.titleBefore" placeholder="Bc" />
           </FormControl>
         </Grid>
 
         <Grid item sm={3} xs={6}>
           <FormControl>
             <FormLabel>Meno</FormLabel>
-            <FormInput required name="basics.firstName" defaultValue="" placeholder="Hermiona" />
+            <FormInput
+              rules={{
+                required: {
+                  value: true,
+                  message: "Meno je povinné",
+                },
+              }}
+              name="basics.firstName"
+              placeholder="Hermiona"
+            />
           </FormControl>
+          {}
         </Grid>
 
         <Grid item sm={4} xs={6}>
           <FormControl>
             <FormLabel>Priezvisko</FormLabel>
-            <FormInput required name="basics.lastName" defaultValue="" placeholder="Granger" />
+            <FormInput
+              required
+              name="basics.lastName"
+              defaultValue=""
+              placeholder="Granger"
+              rules={{
+                required: {
+                  value: true,
+                  message: "Priezvisko je povinné",
+                },
+              }}
+            />
           </FormControl>
         </Grid>
 
@@ -52,7 +78,18 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         <Grid item sm={6} xs={6}>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <FormInput required name="basics.email" defaultValue="" placeholder="hermiona@rokfort.com" />
+            <FormInput
+              required
+              name="basics.email"
+              defaultValue=""
+              placeholder="hermiona@rokfort.com"
+              rules={{
+                required: {
+                  value: true,
+                  message: "Email je povinný",
+                },
+              }}
+            />
           </FormControl>
         </Grid>
       </Grid>
@@ -112,26 +149,52 @@ const BasicsSectionInner = (props: BasicsSectionProps) => {
         <Grid item sm={3} xs={6}>
           <FormControl>
             <FormLabel>Linkedin</FormLabel>
-            <FormInput name="basics.networks.linkedin" placeholder="https://www.linkedin.com/" defaultValue="" />
+            <FormInput
+              name="basics.networks.linkedin"
+              placeholder="https://www.linkedin.com/"
+              rules={{
+                pattern: {
+                  value: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&\/\/=]*)/,
+                  message: "Keine url",
+                },
+              }}
+            />
+            {/* {errors.age && errors.age.type === 'positiveNumber'} */}
           </FormControl>
         </Grid>
 
         <Grid item sm={3} xs={6}>
           <FormControl>
             <FormLabel>Github</FormLabel>
-            <FormInput name="basics.networks.github" placeholder="https://github.com/TvojProfil" defaultValue="" />
+            <FormInput
+              name="basics.networks.github"
+              placeholder="https://github.com/TvojProfil"
+              type="url"
+              pattern="https://.*"
+            />
           </FormControl>
         </Grid>
 
         <Grid item sm={3} xs={6}>
           <FormControl>
             <FormLabel>Gitlab</FormLabel>
-            <FormInput name="basics.networks.gitlab" placeholder="https://gitlab.com/" defaultValue="" />
+            <FormInput
+              name="basics.networks.gitlab"
+              placeholder="https://gitlab.com/"
+              type="url"
+              pattern="https://.*"
+            />
           </FormControl>
         </Grid>
       </Grid>
+      <Grid container spacing={2}>
+        <FormControl>
+          <FormLabel>summar</FormLabel>
+          <FormInput name="basics.summary" placeholder="https://gitlab.com/" defaultValue="" />
+        </FormControl>
+      </Grid>
     </FormSection>
-  )
-}
+  );
+};
 
-export const BasicsSection = BasicsSectionInner
+export const BasicsSection = BasicsSectionInner;

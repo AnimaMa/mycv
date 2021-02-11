@@ -1,32 +1,33 @@
-import { Divider } from "@material-ui/core"
-import Box from "@material-ui/core/Box"
-import Button from "@material-ui/core/Button"
-import FormControl from "@material-ui/core/FormControl"
-import FormLabel from "@material-ui/core/FormLabel"
-import Grid from "@material-ui/core/Grid"
-import React, { useEffect } from "react"
-import { useFieldArray, useFormContext } from "react-hook-form"
-import { FormInput } from "../../../shared/Form/FormInput/FormInput"
-import { FormKeyboardDatePicker } from "../../../shared/Form/FormKeyboardDatePicker/FormKeyboardDatePicker"
-import { FormSection } from "../../../shared/Form/FormSection/FormSection"
-import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle"
-import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle"
-import { FormSwitch } from "../../../shared/Form/FormSwitch/FormSwitch"
-import { TooltipDelete } from "../../../shared/Tooltips/TooltipDelete/TooltipDelete"
+import { Divider } from "@material-ui/core";
+import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
+import Grid from "@material-ui/core/Grid";
+import React, { useEffect } from "react";
+import { useFieldArray, useFormContext } from "react-hook-form";
+import { FormInput } from "../../../shared/Form/FormInput/FormInput";
+import { FormKeyboardDatePicker } from "../../../shared/Form/FormKeyboardDatePicker/FormKeyboardDatePicker";
+import { FormSection } from "../../../shared/Form/FormSection/FormSection";
+import { FormSectionSubtitle } from "../../../shared/Form/FormSectionSubtitle/FormSectionSubtitle";
+import { FormSectionTitle } from "../../../shared/Form/FormSectionTitle/FormSectionTitle";
+import { FormSwitch } from "../../../shared/Form/FormSwitch/FormSwitch";
+import { TooltipDelete } from "../../../shared/Tooltips/TooltipDelete/TooltipDelete";
+import { ErrorMessage } from "@hookform/error-message";
 
 export interface EducationSectionProps {
-  className?: string
+  className?: string;
 }
 
 const EducationSectionInner = (props: EducationSectionProps) => {
-  const { control } = useFormContext()
+  const { control } = useFormContext();
   const { fields, append, remove } = useFieldArray({
     control,
     name: "education",
-  })
+  });
   useEffect(() => {
-    append({})
-  }, [])
+    append({});
+  }, []);
 
   return (
     <FormSection className={props.className}>
@@ -42,7 +43,12 @@ const EducationSectionInner = (props: EducationSectionProps) => {
                   <FormInput
                     name={`education[${index}].institution`}
                     placeholder="Rokfortská stredná škola čarodejnícka"
-                    defaultValue=""
+                    rules={{
+                      required: {
+                        value: true,
+                        message: "Názov školy je povinný",
+                      },
+                    }}
                   />
                 </FormControl>
               </Grid>
@@ -117,7 +123,7 @@ const EducationSectionInner = (props: EducationSectionProps) => {
         Pridať vzdelanie
       </Button>
     </FormSection>
-  )
-}
+  );
+};
 
-export const EducationSection = EducationSectionInner
+export const EducationSection = EducationSectionInner;

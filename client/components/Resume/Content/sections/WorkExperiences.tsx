@@ -19,7 +19,7 @@ export interface SummaryProps {
 export const WorkExperiences = (props: SummaryProps) => {
   const { workExperience } = useResume()
   return (
-    <div className={`${props.className} my-2`}>
+    <div className={`${props.className} my-2`} id="workExperiences">
       <SectionHeading
         withIcon={true}
         heading="Pracovné skúsenosti"

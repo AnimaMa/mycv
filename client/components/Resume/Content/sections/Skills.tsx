@@ -1,16 +1,16 @@
-import React from "react"
-import { SectionHeading } from "../../components/SectionHeading"
-import { SectionWrap } from "../../components/SectionWrap"
-import { useResume } from "../../ResumeProvider/ResumeProvider"
+import React from "react";
+import { SectionHeading } from "../../components/SectionHeading";
+import { SectionWrap } from "../../components/SectionWrap";
+import { useResume } from "../../ResumeProvider/ResumeProvider";
 
 export interface SkillsProps {
-  className?: string
+  className?: string;
 }
 
 export const Skills = (props: SkillsProps) => {
-  const { skill } = useResume()
+  const { skill } = useResume();
   return (
-    <div className={props.className}>
+    <div className={props.className} id="skills">
       <SectionHeading
         withIcon={true}
         heading="Zručnosti / Silné stránky"
@@ -32,5 +32,5 @@ export const Skills = (props: SkillsProps) => {
           ))}
       </SectionWrap>
     </div>
-  )
-}
+  );
+};
