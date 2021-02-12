@@ -18,9 +18,6 @@ export const Courses = (props: CoursesProps) => {
         {course?.map((course, index) => (
           <Course {...course} key={index} />
         ))}
-        {course?.map((course, index) => (
-          <Course {...course} key={index} />
-        ))}
       </div>
     </div>
   )
