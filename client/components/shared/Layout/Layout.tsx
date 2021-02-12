@@ -11,7 +11,6 @@ const Layout = (props: LayoutProps) => {
     <div className={`${props?.className} ${props.bgColor ? "with-bg-color" : ""}`}>
       <Header />
       <main>{props.children}</main>
-      {/* <Footer /> */}
     </div>
   )
 }

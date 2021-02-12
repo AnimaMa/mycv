@@ -1,12 +1,12 @@
-import Image from "next/image";
-import React from "react";
-import { filterEmptySections } from "../utils/filterEmptySections";
-import { Aside } from "./Aside/Aside";
-import { Content } from "./Content/Content";
-import { useSections } from "./Content/hooks/useSections";
+import Image from "next/image"
+import React from "react"
+import { filterEmptySections } from "../utils/filterEmptySections"
+import { Aside } from "./Aside/Aside"
+import { Content } from "./Content/Content"
+import { useSections } from "./Content/hooks/useSections"
 
 export const ResumeContent = () => {
-  const sections = useSections();
+  const sections = useSections()
   return (
     <div className="wrapper">
       <nav className="flex items-center justify-end">
@@ -27,7 +27,7 @@ export const ResumeContent = () => {
               .map((section) => (
                 <a
                   href={`#${section.link}`}
-                  className="text-primary text-sm sm:flex hidden hover:text-secondary font-normal uppercase"
+                  className="text-primary text-xs md:text-sm  sm:flex hidden hover:text-secondary font-normal uppercase"
                 >
                   {section.name}
                 </a>
@@ -36,10 +36,11 @@ export const ResumeContent = () => {
         </div>
       </nav>
 
-      <div className="flex flex-col xl:flex-row bg-white h-full relative w-full mb-8">
+      <div className="flex flex-col xl:flex-row bg-white h-full relative w-full rounded-md shadow-sm">
         <Aside />
         <Content />
       </div>
+      <div className="pt-32" />
     </div>
-  );
-};
+  )
+}

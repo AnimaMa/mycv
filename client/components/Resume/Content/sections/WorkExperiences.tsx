@@ -11,7 +11,6 @@ import { Duration } from "../../components/Duration"
 import { SectionHeading } from "../../components/SectionHeading"
 import { SectionSubContent } from "../../components/SectionSubContent"
 import { useResume } from "../../ResumeProvider/ResumeProvider"
-import styles from "./sections.module.css"
 
 export interface SummaryProps {
   className?: string
@@ -20,7 +19,7 @@ export interface SummaryProps {
 export const WorkExperiences = (props: SummaryProps) => {
   const { workExperience } = useResume()
   return (
-    <div className={`${props.className} ${styles.section} my-2`} id="workExperiences">
+    <div className={`${props.className} my-2`} id="workExperiences">
       <SectionHeading
         withIcon={true}
         heading="Pracovné skúsenosti"

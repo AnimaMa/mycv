@@ -9,9 +9,9 @@ export const Address = () => {
     <div className="my-4">
       {basics.location && (
         <div className="my-4">
-          <div className="flex  items-center space-x-2">
+          <div className="flex sm:flex-row flex-col items-center sm:items-start">
             <IoMdPin className="text-base mr-1 text-secondary" />
-            <div>
+            <div className="mt-3 sm:mt-0">
               <p className="mb-2 font-thin">{basics.location.address}</p>
               <p className="mb-2 font-thin">{`${basics.location.city}, ${basics.location.postalCode}`}</p>
               <p className="font-thin"> {basics.location.country}</p>

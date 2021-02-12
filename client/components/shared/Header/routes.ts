@@ -11,6 +11,11 @@ export const routes: RouteLink[] = [
   },
   {
     to: "/create-resume",
-    label: "Create resume",
+    label: "Vytvoriť resume",
+  },
+
+  {
+    to: "/r/4f90d13a42",
+    label: "Ukážka",
   },
 ]

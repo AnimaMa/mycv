@@ -6,5 +6,5 @@ export interface SectionWrapProps {
 }
 
 export const SectionWrap = (props: SectionWrapProps) => {
-  return <div className={`${props.className} md:pl-16`}>{props.children}</div>
+  return <div className={`${props.className} md:pl-16 px-2`}>{props.children}</div>
 }

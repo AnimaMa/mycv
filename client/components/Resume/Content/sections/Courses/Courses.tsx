@@ -14,7 +14,10 @@ export const Courses = (props: CoursesProps) => {
     <div className={props.className} id="courses">
       <SectionHeading withIcon={true} heading="Kurzy" iconUrl="/img/icon_certificate.svg" iconAlt="certificate icon" />
 
-      <div className="flex flex-wrap space-x-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
+        {course?.map((course, index) => (
+          <Course {...course} key={index} />
+        ))}
         {course?.map((course, index) => (
           <Course {...course} key={index} />
         ))}
