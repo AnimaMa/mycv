@@ -20,28 +20,28 @@ export const Address = (props: AddressProps) => {
       <Grid item sm={6} xs={6}>
         <FormControl>
           <FormLabel>Ulica, č. domu</FormLabel>
-          <FormInput name="basics.location.address" defaultValue="" placeholder="Chrabromilova 7" />
+          <FormInput name="basics.location.address" placeholder="Chrabromilova 7" />
         </FormControl>
       </Grid>
 
       <Grid item sm={6} xs={6}>
         <FormControl>
           <FormLabel>Mesto</FormLabel>
-          <FormInput name="basics.location.city" defaultValue="" placeholder="London" />
+          <FormInput name="basics.location.city" placeholder="London" />
         </FormControl>
       </Grid>
 
       <Grid item sm={3} xs={6}>
         <FormControl>
           <FormLabel>PSČ</FormLabel>
-          <FormInput name="basics.location.postalCode" defaultValue="" placeholder="912 34" />
+          <FormInput name="basics.location.postalCode" placeholder="912 34" />
         </FormControl>
       </Grid>
 
       <Grid item sm={3} xs={6}>
         <FormControl>
           <FormLabel>Krajina</FormLabel>
-          <FormInput name="basics.location.country" defaultValue="" placeholder="Slovensko" />
+          <FormInput name="basics.location.country" placeholder="Slovensko" />
         </FormControl>
       </Grid>
     </Grid>

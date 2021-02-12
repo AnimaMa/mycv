@@ -24,10 +24,11 @@ export const ResumeContent = () => {
           <div className="sm:flex  min-w-300 bg-white items-center px-4 space-x-4 pr-8">
             {Object.values(sections)
               .filter(filterEmptySections)
-              .map((section) => (
+              .map((section, index) => (
                 <a
                   href={`#${section.link}`}
                   className="text-primary text-xs md:text-sm  sm:flex hidden hover:text-secondary font-normal uppercase"
+                  key={index}
                 >
                   {section.name}
                 </a>

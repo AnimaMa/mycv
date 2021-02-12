@@ -46,7 +46,7 @@ export const WorkExperiences = (props: SummaryProps) => {
 
                 {work.usedTechnologies && (
                   <div className="flex my-2 flex-row">
-                    <p className="pb-1 font-thin text-secondary">Technologie s ktorymi si pracoval:</p>
+                    <p className="pb-1 font-thin text-secondary">Technologie s ktorými som pracoval/a:</p>
                     <p className="pl-2 font-thin">{work.usedTechnologies}</p>
                   </div>
                 )}
