@@ -95,8 +95,9 @@ input {
        height: 22px;
 }
 
-input::placeholder {
+*::placeholder {
        font-size: 12px;
+       font-weight: 100;
 }
 
 .MuiFormLabel-root {

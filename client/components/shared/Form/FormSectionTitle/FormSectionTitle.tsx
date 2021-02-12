@@ -6,7 +6,7 @@ export interface FormSectionTitleProps {
 }
 
 const FormSectionTitleInner = (props: FormSectionTitleProps) => {
-  return <p className={`${props.className} text-2xl  text-primary my-6`}>{props.children}</p>
+  return <p className={`${props.className} text-2xl  text-primary mb-10`}>{props.children}</p>
 }
 
 export const FormSectionTitle = FormSectionTitleInner

@@ -9,11 +9,13 @@ export interface FormInputProps {
   defaultValue?: string
   rules: Object
   placeholder?: string
+  multiline?: boolean
+  rows?: number
 }
 
 const FormInputInner = (props) => {
   const { control, errors } = useFormContext()
-  const { name, label, defaultValue, rules, placeholder } = props
+  const { name, label, defaultValue, rules, placeholder, multiline, rows } = props
 
   return (
     <Controller
@@ -28,6 +30,8 @@ const FormInputInner = (props) => {
       helperText={dot.pick(`${name}.message`, errors)}
       rules={rules}
       placeholder={placeholder}
+      multiline={multiline}
+      rows={rows}
     />
   )
 }
