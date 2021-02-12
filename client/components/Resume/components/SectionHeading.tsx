@@ -17,7 +17,7 @@ export const SectionHeading = (props: SectionHeadingProps) => {
           <Image src={props.iconUrl} alt={props.iconAlt} width={40} height={45} />
         </span>
       )}
-      <h2 className=" text-primary md:text-3xl text-xl text-bold ">{props.heading} </h2>
+      <h2 className={`${props?.className} text-primary md:text-3xl text-xl text-bold   `}>{props.heading} </h2>
     </div>
   )
 }

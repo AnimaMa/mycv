@@ -21,13 +21,13 @@ export const ResumeContent = () => {
             />
           </div>
 
-          <div className="sm:flex  min-w-300 bg-white items-center px-4">
+          <div className="sm:flex  min-w-300 bg-white items-center px-4 space-x-4 pr-8">
             {Object.values(sections)
               .filter(filterEmptySections)
               .map((section) => (
                 <a
                   href={`#${section.link}`}
-                  className="text-primary text-sm sm:flex hidden hover:text-secondary font-normal mr-4 uppercase"
+                  className="text-primary text-sm sm:flex hidden hover:text-secondary font-normal uppercase"
                 >
                   {section.name}
                 </a>
@@ -36,7 +36,7 @@ export const ResumeContent = () => {
         </div>
       </nav>
 
-      <div className="flex flex-col sm:flex-row bg-white h-full relative w-full mb-8">
+      <div className="flex flex-col xl:flex-row bg-white h-full relative w-full mb-8">
         <Aside />
         <Content />
       </div>

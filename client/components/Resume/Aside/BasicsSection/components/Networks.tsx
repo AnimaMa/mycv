@@ -16,25 +16,30 @@ export const Networks = (props: ComponentNameProps) => {
     <div className={props.className}>
       <div className="flex justify-center space-x-3">
         {networks?.linkedin && (
-          <a href={networks.linkedin}>
+          <a target="_blank" rel="noopener noreferrer" href={networks.linkedin}>
             <AiFillLinkedin className={iconClassNames} />
           </a>
         )}
         {networks?.github && (
-          <a href={networks.github}>
+          <a target="_blank" rel="noopener noreferrer" href={networks.github}>
             <AiFillGithub className={iconClassNames} />
           </a>
         )}
         {networks?.gitlab && (
-          <a href={networks.gitlab} className={iconClassNames}>
+          <a target="_blank" rel="noopener noreferrer" href={networks.gitlab} className={iconClassNames}>
             <AiFillGitlab />
           </a>
         )}
       </div>
       {networks?.customWebsite && (
         <div className="my-4 flex justify-center">
-          <a href="networks?.customWebsite" className="text-sm text-primary hover:text-secondary">
-            {getHostNamefromUrl(networks?.customWebsite)}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={networks.customWebsite}
+            className="text-sm text-primary hover:text-secondary"
+          >
+            {getHostNamefromUrl(networks.customWebsite)}
           </a>
         </div>
       )}

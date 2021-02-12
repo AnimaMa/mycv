@@ -38,7 +38,6 @@ const SkillsSectionInner = (props: SkillsSectionProps) => {
                   <FormInput
                     name={`skill[${index}].name`}
                     placeholder="Kreativita,  Zodpovednosť, Organizačné schopnosti..."
-                    defaultValue=""
                     rules={{}}
                   />
                 </FormControl>
@@ -47,7 +46,7 @@ const SkillsSectionInner = (props: SkillsSectionProps) => {
               <Grid item sm={6} xs={12}>
                 <FormControl>
                   <FormLabel>Úroveň</FormLabel>
-                  <FormInput name={`skill[${index}].level`} placeholder="Pokročilá" defaultValue="" rules={{}} />
+                  <FormInput name={`skill[${index}].level`} placeholder="Pokročilá" rules={{}} />
                 </FormControl>
               </Grid>
 
@@ -57,7 +56,6 @@ const SkillsSectionInner = (props: SkillsSectionProps) => {
                   <FormInput
                     name={`skill[${index}].technologies`}
                     placeholder="Skill (napr. Communication, Teamwork, React, Design)"
-                    defaultValue=""
                     rules={{}}
                   />
                 </FormControl>

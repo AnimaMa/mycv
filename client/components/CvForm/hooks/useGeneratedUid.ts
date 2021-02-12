@@ -1,23 +1,25 @@
-import { nanoid } from "nanoid"
-import { useEffect, useState } from "react"
-import { useQuery } from "react-query"
-import { api } from "../../../lib/api/api"
+import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
+import { api } from "../../../lib/api/api";
+import { customAlphabet } from "nanoid";
 
-const ALREADY_USED = "4f90d13a42"
+const ALREADY_USED = "4f90d13a42";
+
+const nanoid = customAlphabet("1234567890abcdefghijklmnourqstxyz", 10);
 
 export const useGeneratedUid = () => {
-  const [uid, setUid] = useState(ALREADY_USED)
+  const [uid, setUid] = useState(ALREADY_USED);
 
   const { refetch, isLoading } = useQuery(["checkUid", { uid }], async ({ queryKey }) => {
-    const { data } = await api.get(`/resumes?uid=${uid}`)
+    const { data } = await api.get(`/resumes?uid=${uid}`);
     if (data.length > 0) {
-      setUid(nanoid())
+      setUid(nanoid());
     }
-  })
+  });
 
   useEffect(() => {
-    refetch()
-  }, [uid])
+    refetch();
+  }, [uid]);
 
-  return { uid, isGenerating: isLoading }
-}
+  return { uid, isGenerating: isLoading };
+};

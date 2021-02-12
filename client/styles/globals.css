@@ -4,6 +4,18 @@
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 50px;
+  margin: -50px 0 0;
+}
+
+
 main {
   height: 100%;
   min-height: calc(100vh - 100px);

@@ -1,19 +1,19 @@
-import React from "react"
-import { IoMdGlobe } from "react-icons/io"
-import { MdPlace } from "react-icons/md"
-import { Resumes } from "../../../../../../lib/models/resume"
-import { getHostNamefromUrl } from "../../../../../utils/getHostNamefromUrl"
+import React from "react";
+import { IoMdGlobe } from "react-icons/io";
+import { MdPlace } from "react-icons/md";
+import { Resumes } from "../../../../../../lib/models/resume";
+import { getHostNamefromUrl } from "../../../../../utils/getHostNamefromUrl";
 
 export interface CourseProps extends Resumes.Course {
-  className?: string
+  className?: string;
 }
 
 export const Course = (props: CourseProps) => {
-  const { id, name, place, website } = props
+  const { id, name, place, website } = props;
 
   return (
-    <div className=" mr-8 " key={id}>
-      <p className="text-secondary uppercase mb-4">{name}</p>
+    <div className=" bg-shadow rounded-lg py-8 px-12 " key={id}>
+      <p className="text-primary text-lg mb-4">{name}</p>
 
       {place && (
         <div className="flex flex-col items-start justify-center mb-2">
@@ -35,5 +35,5 @@ export const Course = (props: CourseProps) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
