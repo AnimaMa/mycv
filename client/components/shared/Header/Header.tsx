@@ -5,7 +5,7 @@ import { routes } from "./routes"
 
 const HeaderInner = () => {
   return (
-    <header className="top-0 p-y-5">
+    <header className="top-0 p-y-5 z-50 relative">
       <div className="container mx-auto px-4">
         <nav className="navigation flex justify-between items-center">
           <Link href="/">
