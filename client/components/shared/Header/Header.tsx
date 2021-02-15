@@ -14,7 +14,7 @@ const HeaderInner = () => {
             </a>
           </Link>
 
-          <div className="flex space-x-2 sm:space-x-4 items-center">
+          <div className="flex space-x-2 sm:space-x-4 items-center h-32">
             {routes.map((route) => (
               <Link href={route.to} key={route.label}>
                 <a className="  text-primary  hover:text-secondary transition duration-300 font-normal sm:text-lg text-xs ">
