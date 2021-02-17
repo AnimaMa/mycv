@@ -6,6 +6,7 @@ import { Resumes } from "../../lib/models/resume"
 import { generateResumeRoute } from "../../lib/routes"
 import { ResumeContent } from "../../components/Resume/ResumeContent"
 import Layout from "../../components/shared/Layout/Layout"
+import Head from "next/head"
 
 interface ResumePageProps {
   resume: Resumes.Resume
@@ -17,6 +18,13 @@ export const ResumePage = (props: ResumePageProps) => {
   return (
     <div>
       <ResumeProvider resume={resume}>
+        <Head>
+          <meta
+            property="og:title"
+            content={`${resume.basics.firstName} ${resume.basics.lastName} | Cloud Resume`}
+            key="title"
+          />
+        </Head>
         <Layout bgColor={true} className="layout_create-cv">
           <div className="container mx-auto lg:5/12 md:w-10/12  w-11/12  mb-5">
             <ResumeContent />
